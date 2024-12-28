@@ -190,9 +190,9 @@
                 <h1 class="normal title" id="component-title">random Wandering</h1>
             
         </header>
-        <p><p>:paw_prints: Random Question Wandering</p>
+        <p><p>🐾  Random Question Wandering</p>
 <hr />
-<h2 id="cherry_blossom-what-is-the-difference-between-si-projection-and-fid">:cherry_blossom: What is the difference between SI-Projection and FID?</h2>
+<h2 id="what-is-the-difference-between-si-projection-and-fid">🌸 What is the difference between SI-Projection and FID?</h2>
 <p>The <strong>SI-projection</strong> and <strong>FID (Free Induction Decay)</strong> are two different concepts in Magnetic Resonance Imaging (MRI) and spectroscopy, though they are related in the context of data acquisition and signal interpretation:</p>
 <h3 id="1-free-induction-decay-fid">1. <strong>Free Induction Decay (FID)</strong></h3>
 <ul>
@@ -201,17 +201,19 @@
 </li>
 <li>
 <p><strong>Characteristics</strong>:</p>
-</li>
+<ul>
 <li>It is the time-domain signal acquired directly by the receiver coil.</li>
 <li>Contains all frequency components of the excited spins.</li>
-<li>
-<p>The decay is due to <strong>T2* relaxation</strong>, which encompasses both dephasing caused by spin-spin interactions and magnetic field inhomogeneities.</p>
+<li>The decay is due to <strong>T2* relaxation</strong>, which encompasses both dephasing caused by spin-spin interactions and magnetic field inhomogeneities.</li>
+</ul>
 </li>
 <li>
 <p><strong>Usage</strong>:</p>
-</li>
+<ul>
 <li>In spectroscopy, FID is Fourier transformed to extract the frequency-domain spectrum.</li>
 <li>In imaging, FID can be sampled to generate k-space data, which is later transformed into an image.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="2-si-projection-superior-inferior-projection">2. <strong>SI-Projection (Superior-Inferior Projection)</strong></h3>
@@ -221,17 +223,19 @@
 </li>
 <li>
 <p><strong>Characteristics</strong>:</p>
-</li>
+<ul>
 <li>It's a spatially resolved signal that contains positional information along the superior-inferior axis.</li>
 <li>Typically used in projection-based imaging methods or when simplifying multi-dimensional data.</li>
-<li>
-<p>May be used for quick anatomical localization or as an intermediate step in reconstruction workflows.</p>
+<li>May be used for quick anatomical localization or as an intermediate step in reconstruction workflows.</li>
+</ul>
 </li>
 <li>
 <p><strong>Usage</strong>:</p>
-</li>
+<ul>
 <li>In motion-resolved imaging, SI-projections are often used to monitor respiratory or cardiac motion.</li>
 <li>For example, signals binned along the SI-axis can capture diaphragm movement during breathing.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="key-differences"><strong>Key Differences</strong></h3>
@@ -274,80 +278,100 @@
 <hr />
 <h3 id="example-in-practice">Example in Practice</h3>
 <ol>
-<li><strong>FID</strong>:</li>
-<li>Directly acquired after the RF pulse.</li>
 <li>
-<p>Used in spectroscopy or as input for advanced reconstruction techniques in imaging.</p>
+<p><strong>FID</strong>:</p>
+<ul>
+<li>Directly acquired after the RF pulse.</li>
+<li>Used in spectroscopy or as input for advanced reconstruction techniques in imaging.</li>
+</ul>
 </li>
 <li>
 <p><strong>SI-Projection</strong>:</p>
-</li>
+<ul>
 <li>Derived from imaging data along the superior-inferior axis.</li>
 <li>Often used in motion detection, like tracking respiratory motion during MRI.</li>
+</ul>
+</li>
 </ol>
 <hr />
-<h2 id="cherry_blossom-ok-then-for-the-raw-data-readouts-from-3d-radial-trajectory-how-can-i-extract-them-respectively">:cherry_blossom: OK, then for the raw data readouts from 3D radial trajectory, how can I extract them respectively?</h2>
+<h2 id="ok-then-for-the-raw-data-readouts-from-3d-radial-trajectory-how-can-i-extract-them-respectively">🌸 OK, then for the raw data readouts from 3D radial trajectory, how can I extract them respectively?</h2>
 <p>Extracting <strong>FID</strong> and <strong>SI-projection</strong> from the raw data acquired using a 3D radial trajectory requires understanding the data's structure and processing steps. Here's how you can approach it:</p>
 <hr />
 <h3 id="1-understanding-the-raw-data"><strong>1. Understanding the Raw Data</strong></h3>
 <ul>
-<li><strong>3D Radial Trajectory</strong>: In a 3D radial acquisition, k-space is sampled along radial spokes that span the 3D volume.</li>
-<li>Each readout corresponds to a radial trajectory in k-space.</li>
 <li>
-<p>Data typically includes both real and imaginary parts of the signal for each sampled point.</p>
+<p><strong>3D Radial Trajectory</strong>: In a 3D radial acquisition, k-space is sampled along radial spokes that span the 3D volume.</p>
+<ul>
+<li>Each readout corresponds to a radial trajectory in k-space.</li>
+<li>Data typically includes both real and imaginary parts of the signal for each sampled point.</li>
+</ul>
 </li>
 <li>
 <p><strong>Key Concepts</strong>:</p>
-</li>
+<ul>
 <li><strong>FID</strong>: The signal along the time dimension for a single trajectory before gridding or Fourier Transform.</li>
 <li><strong>SI-Projection</strong>: Data integrated or projected along the superior-inferior axis after some spatial processing.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="2-extracting-fid"><strong>2. Extracting FID</strong></h3>
 <p>The <strong>FID</strong> is essentially the raw time-domain signal acquired during each readout, and it can be extracted as follows:</p>
 <ol>
-<li><strong>Identify the Readout Dimension</strong>:</li>
-<li>Locate the time-domain dimension in your raw data array (e.g., <code>[readout, spokes, coils]</code>).</li>
 <li>
-<p>Each trajectory in k-space corresponds to an FID signal.</p>
+<p><strong>Identify the Readout Dimension</strong>:</p>
+<ul>
+<li>Locate the time-domain dimension in your raw data array (e.g., <code>[readout, spokes, coils]</code>).</li>
+<li>Each trajectory in k-space corresponds to an FID signal.</li>
+</ul>
 </li>
 <li>
 <p><strong>How to Extract FID:</strong></p>
-</li>
-<li>
-<p>The FID is the very first sample of the raw readout for each spoke and each coil:</p>
-<p>```python</p>
-<p>fid = raw_data[0, :, coil_index]
-<code>``
-  -</code>0<code>: Index for the first point in the readout (central k-space).
-  -</code>:<code>: All spokes.
-  -</code>coil_index`: A specific receive coil.</p>
+<ul>
+<li>The FID is the very first sample of the raw readout for each spoke and each coil:</li>
+</ul>
 </li>
 </ol>
+<pre class="codehilite"><code class="language-python">fid = raw_data[0, :, coil_index]
+</code></pre>
+
+<pre class="codehilite"><code>  - `0`: Index for the first point in the readout (central k-space).
+  - `:`: All spokes.
+  - `coil_index`: A specific receive coil.
+</code></pre>
+
 <hr />
 <h3 id="3-extracting-si-projection"><strong>3. Extracting SI-Projection</strong></h3>
 <p>The <strong>SI-projection</strong> requires spatial information, so some level of reconstruction or processing is needed:</p>
 <ol>
-<li><strong>Reconstruct SI Direction</strong>:</li>
-<li>Use the radial trajectory information to identify k-space points corresponding to the superior-inferior axis.</li>
 <li>
-<p>If trajectory data is stored in <code>kx</code>, <code>ky</code>, <code>kz</code> arrays, filter points for the SI-axis (e.g., where <code>kx ≈ ky ≈ 0</code>).</p>
+<p><strong>Reconstruct SI Direction</strong>:</p>
+<ul>
+<li>Use the radial trajectory information to identify k-space points corresponding to the superior-inferior axis.</li>
+<li>If trajectory data is stored in <code>kx</code>, <code>ky</code>, <code>kz</code> arrays, filter points for the SI-axis (e.g., where <code>kx ≈ ky ≈ 0</code>).</li>
+</ul>
 </li>
 <li>
 <p><strong>Sum or Integrate Data</strong>:</p>
+<ul>
+<li>Aggregate the raw data over the orthogonal dimensions:</li>
+</ul>
 </li>
-<li>Aggregate the raw data over the orthogonal dimensions:
-     <code>python
-     si_projection = raw_data.sum(axis=orthogonal_axes)</code></li>
-<li>
-<p>For a specific coil:
-     <code>python
-     si_projection = np.sum(raw_data[:, si_indices, coil_index], axis=1)</code></p>
-</li>
-<li>
-<p><strong>Motion Binning (Optional)</strong>:</p>
-</li>
+</ol>
+<pre class="codehilite"><code class="language-python">si_projection = raw_data.sum(axis=orthogonal_axes)
+</code></pre>
+
+<pre class="codehilite"><code>  - For a specific coil:
+</code></pre>
+
+<pre class="codehilite"><code class="language-python">si_projection = np.sum(raw_data[:, si_indices, coil_index], axis=1)
+</code></pre>
+
+<ol>
+<li><strong>Motion Binning (Optional)</strong>:<ul>
 <li>If used for motion analysis, apply respiratory or cardiac binning based on temporal information or physiological signals.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="4-practical-notes"><strong>4. Practical Notes</strong></h3>
@@ -374,61 +398,69 @@
 <h3 id="1-fid-free-induction-decay"><strong>1. FID (Free Induction Decay)</strong></h3>
 <h4 id="key-features"><strong>Key Features:</strong></h4>
 <ul>
-<li><strong>What It Captures</strong>:</li>
-<li>The FID is sensitive to <strong>bulk magnetization changes</strong>, such as those caused by large-scale motion, scanner instability, or physiological processes that affect the entire signal simultaneously.</li>
 <li>
-<p>Captures variations over time at the center of k-space, reflecting the overall signal behavior.</p>
+<p><strong>What It Captures</strong>:</p>
+<ul>
+<li>The FID is sensitive to <strong>bulk magnetization changes</strong>, such as those caused by large-scale motion, scanner instability, or physiological processes that affect the entire signal simultaneously.</li>
+<li>Captures variations over time at the center of k-space, reflecting the overall signal behavior.</li>
+</ul>
 </li>
 <li>
 <p><strong>How It Works for Motion Detection</strong>:</p>
-</li>
+<ul>
 <li>Motion affects the uniformity of the magnetic field, causing variations in the FID amplitude or phase.</li>
-<li>
-<p>Large-scale motion (e.g., head movement) can disrupt the signal decay pattern.</p>
+<li>Large-scale motion (e.g., head movement) can disrupt the signal decay pattern.</li>
+</ul>
 </li>
 <li>
 <p><strong>Strengths</strong>:</p>
-</li>
+<ul>
 <li><strong>High sensitivity to gross motion</strong>: Since it captures the central k-space signal, even small deviations in motion can be detected as phase or amplitude variations.</li>
 <li><strong>No spatial information required</strong>: FID does not depend on spatial encoding, making it computationally lightweight and simple to analyze.</li>
-<li>
-<p>Ideal for detecting <strong>global motion patterns</strong>, such as large head movements.</p>
+<li>Ideal for detecting <strong>global motion patterns</strong>, such as large head movements.</li>
+</ul>
 </li>
 <li>
 <p><strong>Limitations</strong>:</p>
-</li>
+<ul>
 <li>Lacks spatial specificity: Cannot localize motion along specific axes or regions.</li>
 <li>Less effective for subtle, localized motion or small physiological movements (e.g., breathing, eye motion).</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="2-si-projection-superior-inferior-projection_1"><strong>2. SI-Projection (Superior-Inferior Projection)</strong></h3>
 <h4 id="key-features_1"><strong>Key Features:</strong></h4>
 <ul>
-<li><strong>What It Captures</strong>:</li>
-<li>SI-projection aggregates data along the superior-inferior axis of the body, providing a motion-sensitive signal that captures shifts in this specific spatial direction.</li>
 <li>
-<p>Reflects changes in signal distribution along the axis, making it more <strong>spatially specific</strong> than FID.</p>
+<p><strong>What It Captures</strong>:</p>
+<ul>
+<li>SI-projection aggregates data along the superior-inferior axis of the body, providing a motion-sensitive signal that captures shifts in this specific spatial direction.</li>
+<li>Reflects changes in signal distribution along the axis, making it more <strong>spatially specific</strong> than FID.</li>
+</ul>
 </li>
 <li>
 <p><strong>How It Works for Motion Detection</strong>:</p>
-</li>
+<ul>
 <li>Tracks changes in the superior-inferior axis signal due to <strong>respiratory motion</strong>, <strong>cardiac motion</strong>, or localized shifts (e.g., diaphragm or organ movement).</li>
-<li>
-<p>Useful in motion-binned reconstruction methods to sort data into motion states.</p>
+<li>Useful in motion-binned reconstruction methods to sort data into motion states.</li>
+</ul>
 </li>
 <li>
 <p><strong>Strengths</strong>:</p>
-</li>
+<ul>
 <li><strong>Direction-specific</strong>: Captures motion primarily along the SI axis, which is beneficial for tracking respiratory motion or vertical head movements.</li>
 <li>Allows <strong>motion binning</strong>: By grouping data based on SI-projection values, you can segment the data into different motion states for retrospective correction.</li>
-<li>
-<p>More sensitive to subtle, periodic physiological motion (e.g., respiration or heartbeat).</p>
+<li>More sensitive to subtle, periodic physiological motion (e.g., respiration or heartbeat).</li>
+</ul>
 </li>
 <li>
 <p><strong>Limitations</strong>:</p>
-</li>
+<ul>
 <li>Less sensitive to non-SI motion: Does not effectively capture lateral (left-right) or anterior-posterior movements.</li>
 <li>Requires spatial trajectory information, increasing processing complexity compared to FID.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="comparison-table"><strong>Comparison Table</strong></h3>
@@ -471,18 +503,22 @@
 <hr />
 <h3 id="3-which-to-use-when"><strong>3. Which to Use When?</strong></h3>
 <ul>
-<li><strong>Use FID When</strong>:</li>
+<li>
+<p><strong>Use FID When</strong>:</p>
+<ul>
 <li>The primary concern is <strong>gross motion</strong>, such as patient movement or scanner instabilities.</li>
 <li>Simplicity is crucial (no need for spatial information or projections).</li>
-<li>
-<p>You are monitoring the signal for artifacts in real-time (e.g., during acquisition).</p>
+<li>You are monitoring the signal for artifacts in real-time (e.g., during acquisition).</li>
+</ul>
 </li>
 <li>
 <p><strong>Use SI-Projection When</strong>:</p>
-</li>
+<ul>
 <li>The focus is on <strong>physiological motion</strong> such as respiration or cardiac motion.</li>
 <li>You need <strong>motion-resolved reconstructions</strong>, where SI-projections enable binning into different motion states.</li>
 <li>Spatial specificity along the superior-inferior axis is necessary (e.g., for organ tracking or respiratory gating).</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="practical-applications"><strong>Practical Applications</strong></h3>
@@ -524,89 +560,111 @@
 </table>
 <hr />
 <h3 id="4-combining-both"><strong>4. Combining Both</strong></h3>
-<p>In some cases, FID and SI-projection can be used <strong>together</strong>:
-- Use <strong>FID</strong> to monitor large-scale, abrupt motion (e.g., head movement).
-- Use <strong>SI-projection</strong> for subtle, repetitive motion like respiration or cardiac cycles.</p>
+<p>In some cases, FID and SI-projection can be used <strong>together</strong>:</p>
+<ul>
+<li>Use <strong>FID</strong> to monitor large-scale, abrupt motion (e.g., head movement).</li>
+<li>Use <strong>SI-projection</strong> for subtle, repetitive motion like respiration or cardiac cycles.</li>
+</ul>
 <p>By combining these approaches, you can achieve robust motion detection across a wide range of conditions. Let me know if you'd like help implementing this in your dataset!</p>
-<h2 id="cherry_blossom-how-can-si-projection-be-used-in-eye-motion-detection">:cherry_blossom: How can SI-projection be used in eye motion detection?</h2>
+<h2 id="how-can-si-projection-be-used-in-eye-motion-detection">🌸 How can SI-projection be used in eye motion detection?</h2>
 <p>Using <strong>SI-projection</strong> to monitor <strong>eye motion</strong> can be effective, but its applicability depends on the specific characteristics of the eye motion being studied and how well the motion aligns with the <strong>superior-inferior (SI)</strong> axis. Here's a breakdown:</p>
 <hr />
 <h3 id="1-eye-motion-characteristics-and-si-projections"><strong>1. Eye Motion Characteristics and SI-Projections</strong></h3>
 <ul>
-<li><strong>Types of Eye Motion</strong>:</li>
+<li>
+<p><strong>Types of Eye Motion</strong>:</p>
+<ul>
 <li><strong>Fixations</strong>: Minimal motion as the gaze focuses on a single point.</li>
 <li><strong>Saccades</strong>: Rapid shifts in gaze between fixation points, often multidirectional.</li>
 <li><strong>Microsaccades</strong>: Small, involuntary eye movements during fixation.</li>
-<li>
-<p><strong>Smooth Pursuit</strong>: Continuous tracking of a moving target.</p>
+<li><strong>Smooth Pursuit</strong>: Continuous tracking of a moving target.</li>
+</ul>
 </li>
 <li>
 <p><strong>Motion Along the SI-Axis</strong>:</p>
-</li>
+<ul>
 <li>If the primary eye motion occurs along the SI-axis (e.g., vertical saccades), the <strong>SI-projection</strong> would be sensitive to these changes.</li>
 <li>For horizontal (left-right) or oblique movements, the SI-projection would capture only a fraction of the overall motion, limiting its utility.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="2-advantages-of-using-si-projection-for-eye-motion"><strong>2. Advantages of Using SI-Projection for Eye Motion</strong></h3>
 <ul>
-<li><strong>Sensitivity to Vertical Motion</strong>:</li>
-<li>Eye movements with a strong vertical component (e.g., vertical saccades, gaze shifts, or blinking) will produce clear variations in the SI-projection.</li>
 <li>
-<p>Can capture eyelid motion during blinks, as this involves a significant SI-axis component.</p>
+<p><strong>Sensitivity to Vertical Motion</strong>:</p>
+<ul>
+<li>Eye movements with a strong vertical component (e.g., vertical saccades, gaze shifts, or blinking) will produce clear variations in the SI-projection.</li>
+<li>Can capture eyelid motion during blinks, as this involves a significant SI-axis component.</li>
+</ul>
 </li>
 <li>
 <p><strong>Low Computational Complexity</strong>:</p>
-</li>
-<li>
-<p>SI-projections aggregate signal along the vertical axis, reducing the dimensionality of data and simplifying analysis.</p>
+<ul>
+<li>SI-projections aggregate signal along the vertical axis, reducing the dimensionality of data and simplifying analysis.</li>
+</ul>
 </li>
 <li>
 <p><strong>Applications in Eye Motion Studies</strong>:</p>
-</li>
+<ul>
 <li><strong>Blink Detection</strong>: Blinks primarily involve vertical motion of the eyelids, making SI-projection an effective tool.</li>
 <li><strong>Vertical Gaze Tracking</strong>: Changes in vertical eye position can be directly observed in the projection signal.</li>
 <li><strong>Motion Binning</strong>: SI-projections can sort data into states of upward, downward, or stationary gaze for further analysis.</li>
 </ul>
+</li>
+</ul>
 <hr />
 <h3 id="3-challenges-and-limitations"><strong>3. Challenges and Limitations</strong></h3>
 <ul>
-<li><strong>Reduced Sensitivity to Horizontal or Oblique Motion</strong>:</li>
-<li>Eye motion along other axes (e.g., left-right saccades) may not produce significant variations in the SI-projection.</li>
 <li>
-<p>Combining SI-projection with other projections (e.g., along the left-right or anterior-posterior axis) may be necessary for comprehensive motion tracking.</p>
+<p><strong>Reduced Sensitivity to Horizontal or Oblique Motion</strong>:</p>
+<ul>
+<li>Eye motion along other axes (e.g., left-right saccades) may not produce significant variations in the SI-projection.</li>
+<li>Combining SI-projection with other projections (e.g., along the left-right or anterior-posterior axis) may be necessary for comprehensive motion tracking.</li>
+</ul>
 </li>
 <li>
 <p><strong>Small Amplitude of Eye Movements</strong>:</p>
-</li>
-<li>
-<p>Eye movements, especially microsaccades or smooth pursuit, generate smaller displacements compared to gross motion (e.g., respiration). This requires high sensitivity in the SI-projection data.</p>
+<ul>
+<li>Eye movements, especially microsaccades or smooth pursuit, generate smaller displacements compared to gross motion (e.g., respiration). This requires high sensitivity in the SI-projection data.</li>
+</ul>
 </li>
 <li>
 <p><strong>Artifact Sensitivity</strong>:</p>
-</li>
+<ul>
 <li>Noise or signal disturbances unrelated to eye motion (e.g., system vibrations) might interfere with SI-projection signals.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="4-practical-considerations"><strong>4. Practical Considerations</strong></h3>
 <p>To use SI-projection for <strong>eye motion detection</strong>, you might follow these steps:</p>
 <h4 id="step-1-preprocessing"><strong>Step 1: Preprocessing</strong></h4>
 <ul>
-<li><strong>Data Source</strong>:</li>
+<li><strong>Data Source</strong>:<ul>
 <li>Use raw k-space data or reconstructed signals, ensuring the trajectory is well-sampled.</li>
-<li><strong>Trajectory Alignment</strong>:</li>
+</ul>
+</li>
+<li><strong>Trajectory Alignment</strong>:<ul>
 <li>Verify that the SI-axis in the trajectory corresponds to the physical superior-inferior direction of the eye.</li>
+</ul>
+</li>
 </ul>
 <h4 id="step-2-extract-si-projection"><strong>Step 2: Extract SI-Projection</strong></h4>
 <ul>
-<li>Aggregate k-space data along the SI-axis:
-  <code>python
-  si_projection = np.sum(raw_data[:, si_indices, :], axis=1)</code></li>
+<li>Aggregate k-space data along the SI-axis:</li>
 </ul>
+<pre class="codehilite"><code class="language-python">si_projection = np.sum(raw_data[:, si_indices, :], axis=1)
+</code></pre>
+
 <h4 id="step-3-analyze-motion"><strong>Step 3: Analyze Motion</strong></h4>
 <ul>
-<li>Look for abrupt changes in SI-projection signals to detect vertical saccades or blinks:
-  <code>python
-  diff_signal = np.diff(si_projection, axis=0)</code></li>
+<li>Look for abrupt changes in SI-projection signals to detect vertical saccades or blinks:</li>
+</ul>
+<pre class="codehilite"><code class="language-python">diff_signal = np.diff(si_projection, axis=0)
+</code></pre>
+
+<ul>
 <li>Use thresholds to classify motion events (e.g., saccades, blinks, or fixations).</li>
 </ul>
 <h4 id="step-4-validate-against-ground-truth"><strong>Step 4: Validate Against Ground Truth</strong></h4>
@@ -618,21 +676,25 @@
 <p>Here’s how SI-projection could be applied for a <strong>blink detection</strong> task:</p>
 <h4 id="case-blink-detection"><strong>Case: Blink Detection</strong></h4>
 <ol>
-<li><strong>What Happens During a Blink?</strong></li>
 <li>
-<p>Eyelid movement occurs along the SI-axis, creating a sharp spike in the SI-projection signal.</p>
+<p><strong>What Happens During a Blink?</strong></p>
+<ul>
+<li>Eyelid movement occurs along the SI-axis, creating a sharp spike in the SI-projection signal.</li>
+</ul>
 </li>
 <li>
 <p><strong>Signal Extraction</strong>:</p>
-</li>
+<ul>
 <li>Calculate the SI-projection for each time point.</li>
-<li>
-<p>Detect peaks or high-amplitude changes that correspond to eyelid motion.</p>
+<li>Detect peaks or high-amplitude changes that correspond to eyelid motion.</li>
+</ul>
 </li>
 <li>
 <p><strong>Results</strong>:</p>
-</li>
+<ul>
 <li>The SI-projection provides a time-series representation of eye motion along the SI-axis. Peaks in the signal represent blink events.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="comparison-to-other-techniques"><strong>Comparison to Other Techniques</strong></h3>
@@ -671,15 +733,15 @@
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 <p>The <strong>SI-projection</strong> can be a simple, effective tool for detecting <strong>vertical eye motion</strong>, especially blinks and vertical gaze shifts. However, its application is limited to motion along the SI-axis, making it less effective for horizontal or complex multidirectional movements. For comprehensive eye motion analysis, pairing SI-projections with a dedicated eye-tracking system or additional k-space projections would provide better coverage. </p>
 <p>Let me know if you'd like help setting up such an analysis pipeline!</p>
-<h2 id="cherry_blossom-then-can-i-project-it-alternatively-to-another-direction-say-left-right-projection-instead-of-si-projection">:cherry_blossom: Then can I project it alternatively to another direction, say left-right projection instead of SI-projection.</h2>
+<h2 id="then-can-i-project-it-alternatively-to-another-direction-say-left-right-projection-instead-of-si-projection">🌸 Then can I project it alternatively to another direction, say left-right projection instead of SI-projection.</h2>
 <p>Yes, you can project the data along any direction (such as left-right, anterior-posterior, or any oblique direction) instead of the superior-inferior (SI) axis. This involves aggregating the k-space data along the desired direction or axis to extract a corresponding projection. Here's how you can do it step by step:</p>
 <hr />
 <h3 id="1-concept-of-alternative-projections"><strong>1. Concept of Alternative Projections</strong></h3>
 <ul>
-<li><strong>Projection Direction</strong>:</li>
 <li>
-<p>The SI-projection aggregates signal intensity along the superior-inferior axis. Similarly, you can compute a projection along:</p>
+<p><strong>Projection Direction</strong>:</p>
 <ul>
+<li>The SI-projection aggregates signal intensity along the superior-inferior axis. Similarly, you can compute a projection along:</li>
 <li><strong>Left-Right (LR)</strong>: Captures horizontal motion or changes along the x-axis.</li>
 <li><strong>Anterior-Posterior (AP)</strong>: Captures depth or forward-backward changes along the y-axis.</li>
 <li><strong>Custom/Oblique Directions</strong>: Projects data onto a diagonal or other arbitrary axis.</li>
@@ -708,23 +770,24 @@
 </ul>
 <h4 id="step-2-aggregate-along-the-selected-axis"><strong>Step 2: Aggregate Along the Selected Axis</strong></h4>
 <ul>
-<li>
-<p>Aggregate the k-space data along the desired axis by summing or integrating the data.
-  <code>python
-  # Example with numpy arrays
-  lr_projection = np.sum(raw_data[:, lr_indices, :], axis=1)
-  ap_projection = np.sum(raw_data[:, ap_indices, :], axis=1)</code></p>
-</li>
-<li>
-<p>If using Cartesian indices, you can specify which slices or indices correspond to the axis of interest.</p>
-</li>
+<li>Aggregate the k-space data along the desired axis by summing or integrating the data.</li>
+</ul>
+<pre class="codehilite"><code class="language-python"># Example with numpy arrays
+lr_projection = np.sum(raw_data[:, lr_indices, :], axis=1)
+ap_projection = np.sum(raw_data[:, ap_indices, :], axis=1)
+</code></pre>
+
+<ul>
+<li>If using Cartesian indices, you can specify which slices or indices correspond to the axis of interest.</li>
 </ul>
 <h4 id="step-3-visualize-or-analyze-the-projection"><strong>Step 3: Visualize or Analyze the Projection</strong></h4>
 <ul>
 <li>The resulting 1D projection will represent signal variations over time along the chosen axis.</li>
-<li>For motion detection:</li>
+<li>For motion detection:<ul>
 <li>Look for changes or peaks in the projection signal.</li>
 <li>Use thresholds or derivatives to classify motion events.</li>
+</ul>
+</li>
 </ul>
 <h4 id="step-4-validate-against-the-si-projection"><strong>Step 4: Validate Against the SI-Projection</strong></h4>
 <ul>
@@ -739,10 +802,15 @@
 </ul>
 <h4 id="example-2-custom-projection-for-diagonal-motion"><strong>Example 2: Custom Projection for Diagonal Motion</strong></h4>
 <ul>
-<li>If the motion does not align with standard anatomical axes, project the data along an oblique axis.</li>
-<li>Define the oblique axis as a linear combination of standard axes:
-    <code>python
-    oblique_projection = np.sum(raw_data[:, :, :] * weight_matrix, axis=1)</code></li>
+<li>If the motion does not align with standard anatomical axes, project the data along an oblique axis.<ul>
+<li>Define the oblique axis as a linear combination of standard axes:</li>
+</ul>
+</li>
+</ul>
+<pre class="codehilite"><code class="language-python">oblique_projection = np.sum(raw_data[:, :, :] * weight_matrix, axis=1)
+</code></pre>
+
+<ul>
 <li>Here, <code>weight_matrix</code> defines the contribution of each axis to the oblique direction.</li>
 </ul>
 <hr />
@@ -763,7 +831,7 @@
 <hr />
 <h3 id="5-practical-code-example"><strong>5. Practical Code Example</strong></h3>
 <p>Here’s an example for <strong>horizontal (LR) projection</strong>:</p>
-<pre><code class="language-python">import numpy as np
+<pre class="codehilite"><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
 # Simulated k-space data (replace with actual data)
@@ -780,6 +848,7 @@ plt.xlabel('Time')
 plt.ylabel('Signal Intensity')
 plt.show()
 </code></pre>
+
 <hr />
 <h3 id="conclusion_1"><strong>Conclusion</strong></h3>
 <ul>
