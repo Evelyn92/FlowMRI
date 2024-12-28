@@ -1,0 +1,9 @@
+/* Change the font to Times New Roman */
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Adjust the line spacing */
+p, h1, h2, h3, h4, h5, h6, li {
+  line-height: 1.2; /* Adjust the number to change line spacing */
+}

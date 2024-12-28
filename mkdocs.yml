@@ -32,3 +32,6 @@ theme:
     menu: true
     preview: true
     footer: true
+
+extra_css:
+  - stylesheets/extra.css
