@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+    <head>
+                <title>Adaptive bulk motion - FlowMRI</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            <link rel="canonical" href="https://evelyn92.github.io/FlowMRI/nav/papers/adaptive_bulk_motion/">
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../../../assets/css/main.min.css">
+                <script src="../../../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+            <img class="logo" src="../../../assets/logo.png">
+        
+
+        
+            <span class="normal fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">FlowMRI</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../..">[Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../yiwei_cv/">[About me]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" active 
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Artifacts]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="./" class="dropdown-item text-decoration-none  active ">Adaptive bulk motion</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Sequences]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../" class="dropdown-item text-decoration-none ">None</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                        
+                            <!-- block source -->
+<div class="md-source source-detail">
+  <div class="md-source-repo-icon">
+    <i class="fa fa-github-alt" aria-hidden="true"></i>
+  </div>
+
+  <div class="md-source-repo-url">
+    <a href="https://github.com/Evelyn92/FlowMRI" class="md-source">
+      Evelyn92/FlowMRI
+    </a>
+
+    <ul class="md-source-repo-text">
+      <li>
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <img alt="GitHub tag (latest by date)"
+          src="https://img.shields.io/github/v/tag/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <img alt="GitHub Repo stars"
+          src="https://img.shields.io/github/stars/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <img alt="GitHub forks"
+          src="https://img.shields.io/github/forks/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!--  endblock -->
+                        
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+                <h1 class="normal title" id="component-title">Adaptive bulk motion</h1>
+            
+        </header>
+        <p><h2 id="paper-link">Paper link</h2>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf">https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf</a></p>
+<h2 id="extraction-from-the-paper">Extraction from the paper</h2>
+<ul>
+<li>
+<p>Bulk motion</p>
+<ul>
+<li>in the presence of bulk patient motion (i.e. voluntary or involuntary patient movement resulting in translation, rotation or elastic deformations of the body).</li>
+</ul>
+</li>
+<li>
+<p>Gaps/difficulties:</p>
+<ul>
+<li>
+<p>these techniques for respiration cannot correct for bulk motion</p>
+<ul>
+<li>
+<p>which includes voluntary and involuntary patient movement resulting in translation, rotation or elastic deformation of the body.3</p>
+<ul>
+<li>One possibility to remove bulk motion is to exclude corrupted data retrospectively.</li>
+</ul>
+</li>
+<li>
+<p>Because the duration and number of intervals with bulk motion is not known in advance, k‐space must be acquired with significant oversampling to provide sufficient k‐space coverage. This prolongs the scan time unnecessarily if no (or only short) intervals of bulk motion occur, or results in residual undersampling artifacts if more bulk motion than expected occurs.</p>
+</li>
+<li>Limitations:</li>
+</ul>
+</li>
+<li>
+<p>reject data by bulk motion but does not compensate for respiratory motion -&gt; need second processing step.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Method</p>
+<ul>
+<li>Data‐consistency‐driven image stabilization technique that detects and excludes bulk movements during data acquisition.</li>
+<li>Data corrupted by bulk motion were successfully detected and excluded from image reconstruction</li>
+<li>An overall increase in image sharpness and reduction of streaking and shine‐through artifacts were seen in the volunteer study, as well as in the neck and knee scans.</li>
+<li>The proposed technique enables automatic real‐time detection and exclusion of bulk motion during MR examinations without user interaction.</li>
+<li>the technique automatically detects motion‐free data windows and stops the scan if a window with sufficient length has been identified.</li>
+<li>
+<p>What sequence</p>
+</li>
+<li>
+<p>a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling.</p>
+</li>
+<li>The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.</li>
+<li>To obtain motion information, 32 samples of the FID signal are acquired after rewinding the slice selection gradient, which increases the TE by less than 0.5 ms.</li>
+<li>The FID approach is used in this work to derive a motion signal. It has been shown previously that variations in the signal intensity ratio between different receive coils allow the identification of bulk motion.</li>
+<li>
+<p>There are two alternative self-navigation techs:</p>
+<ul>
+<li>non-phase-encoded k-space center lines-&gt;for stack-of-stars sequence, non-Cartesian 3D trajectories good -&gt; for Cartesian 3D sampling it requires the acquisition of additional non-phase-encoded k-space lines, which prolongs the scan time.</li>
+<li>Free induction decay navigators: sample the center of k-space without spatial encoding  immediately after the RF excitation -&gt; selected</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="../assets/image1.png" /></p>
+<p><img alt="image" src="../assets/image2.png" /></p>
+<ul>
+<li>
+<p>32 samples of FID signals -&gt; image calculation environment(ICE) framework -&gt; detection of bulk motion.</p>
+<ul>
+<li>
+<p>The first and last four samples of each FID signal are discarded to account for pre‐ and post‐ringing.</p>
+<ul>
+<li>For ach projection, the summed values from the different coils are concatenated into a projection vector of length Ncoil.</li>
+<li>
+<p>Motion is detected by calculating the correlation coefficient between a reference projection vector and all other projection vectors.</p>
+<p><img alt="image" src="../assets/image3.png" /></p>
+<ul>
+<li>A low correlation coefficient implies that the load distribution of the coil elements has changed. This indicates that the patient position has been altered between the projections.<ul>
+<li>Calculate the reference projection vector, which is defined as the projection with highest overall correlation to all previously acquired projections, is dynamically updated after each projection.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In the current implementation, the reference projection is therefore only calculated within a sliding window containing the previous 100 projections.</p>
+</li>
+<li>Outlier projections, which indicate bulk motion, are identified using a user‐defined acceptance threshold for the correlation coefficient.</li>
+<li>Details during imaging</li>
+</ul>
+</li>
+<li>
+<p>a scan without bulk motion was performed as reference.</p>
+</li>
+<li>max scan time: 5min11s -- 1500 projections</li>
+<li>the acceptance window was set to 400 projections (1min23s) --  fulfill Nyquist criterion for radial sampling (??)</li>
+</ul>
+</li>
+</ul>
+<h2 id="information-about-fid-signal">Information about FID signal</h2>
+<h3 id="fid-signals">FID signals</h3>
+<p><a href="https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.">https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.</a></p>
+<p><img alt="image" src="../assets/image4.png" /></p>
+<ul>
+<li>When an <a href="https://www.sciencedirect.com/topics/neuroscience/radiofrequency-pulse" title="Learn more about RF pulse from ScienceDirect's AI-generated Topic Pages">RF pulse</a> is turned off, protons begin to lose phase coherence, resulting in an exponential decrease of the signal intensity to zero. This signal decay is called free induction decay (FID) (Currie et al., 2013).</li>
+<li>FID signal has a resonant frequency, which takes the form of a sine wave, which is at its highest immediately after the RF pulse is switched off and decreases as relaxation occurs.</li>
+<li>An RF pulse at any flip angle can create an FID because some protons in longitudinal magnetization are tipped into transverse magnetization. </li>
+</ul>
+<h3 id="how-to-extract-the-fid-from-raw-data">How to extract the FID from raw data</h3>
+<h3 id="1-understand-the-acquisition-setup">1. Understand the Acquisition Setup</h3>
+<ul>
+<li>
+<p>FID signals are collected before the imaging gradients are fully applied.</p>
+<ul>
+<li>The FID contains information about the global magnetization state of the tissue but has no spatial encoding yet.</li>
+</ul>
+</li>
+<li>
+<p>In radial stack-of-star sequences, the FID signal corresponds to data at or near the k-space center, typically sampled immediately after the RF pulse.</p>
+<ul>
+<li>why</li>
+<li>The FID signal is generated <strong>immediately</strong> after the RF excitation pulse, as soon as the spins start precessing.</li>
+<li>
+<p>The gradients needed for spatial encoding are typically applied <strong>after the FID starts</strong>. This delay is necessary because:</p>
+</li>
+<li>
+<p>The RF pulse and gradients require separate timing to avoid interference.</p>
+</li>
+<li>Applying gradients during the RF pulse or immediately afterward can distort the FID and reduce signal quality.</li>
+<li>The <strong>initial part of the signal</strong>, acquired before the gradients are active, represents the "pure" FID—this is the part you extract for motion detection or other analyses.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Identify the FID Portion in Raw Data</strong></p>
+<ul>
+<li>The FID is typically acquired as the initial part of each readout, before gradients start encoding spatial information.</li>
+</ul>
+<h3 id="3-extract-k-space-center">3. Extract k-Space Center</h3>
+<ul>
+<li>
+<p>The FID signal corresponds to the low spatial frequency (k-space center) information. You can identify this by:</p>
+<ul>
+<li><strong>Temporal Location:</strong> Extract data samples immediately after the RF pulse and before the imaging gradients are active.</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-fid-in-the-context-of-a-stack-of-star-sequence">4. FID in the Context of a Stack-of-Star Sequence</h3>
+<ul>
+<li>In radial sequences like stack-of-stars, k-space is sampled using radial trajectories starting at the center.</li>
+<li>At the start of each radial spoke, the k-space center is sampled, and this corresponds to the <strong>initial FID signal</strong>.</li>
+<li>Because the gradients are weak or inactive near the k-space center, the early signal is dominated by the FID, with minimal spatial encoding effects.</li>
+</ul>
+<h3 id="5-how-motion-affects-the-fid">5. How Motion Affects the FID</h3>
+<p>Motion impacts the FID signal in the following ways:</p>
+<p><strong>a. Phase Changes Due to Motion</strong></p>
+<ul>
+<li>Motion alters the relative positions of spins in the magnetic field, which changes their precession phase.</li>
+<li>These phase changes are global (affecting the whole signal) and become apparent in the FID because the FID is the earliest signal captured after excitation.</li>
+<li>For example, a small head movement during the acquisition will introduce phase shifts, which can be detected in the FID signal.</li>
+</ul>
+<p><strong>b. Amplitude Modulation</strong></p>
+<ul>
+<li>Motion can cause signal dephasing, where spins lose coherence due to changing positions or velocities. This results in a reduced FID amplitude.</li>
+<li>Additionally, periodic motions (e.g., respiratory or cardiac motion) may modulate the FID signal amplitude in a predictable way.</li>
+</ul>
+<p><strong>c. Frequency Shifts</strong></p>
+<ul>
+<li>If the motion involves velocity (e.g., blood flow or respiratory motion), it can introduce frequency shifts due to the Doppler effect. These shifts can also be detected in the FID.</li>
+</ul>
+<h2 id="information-about-stack-of-star-sequence">Information about stack-of-star sequence</h2>
+<p><a href="https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199">https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199</a></p>
+<p>Illustration</p>
+<p><img alt="image" src="../assets/image5.png" /></p>
+<p>But it does not start from the k-space center?</p>
+<p>Here is the described sequence:</p>
+<ul>
+<li>Data are acquired using a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling <a href="https://mriquestions.com/spoiling---what-and-how.html#/">https://mriquestions.com/spoiling---what-and-how.html#/</a></li>
+<li>The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.</li>
+<li>After spectral fat suppression using a chemical shift selective (CHESS) pulse, all partitions for one radial angle are acquired with centric reordering before the readout scheme is repeated for subsequent radial projections.</li>
+<li>Golden‐angle ordering with an angular increment of 111.246°25 is used for continuous data acquisition.</li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../../yiwei_cv/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" class="nav-link disabled">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '../../..';</script>
+            <script src="../../../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../../../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../../../assets/js/main.min.js""></script>
+                <script src="../../../search/main.js" defer></script>
+
+    </body>
+
+</html>
