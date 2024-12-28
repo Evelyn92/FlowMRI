@@ -8,7 +8,8 @@ nav:
     - Home: index.md
     - About me: nav/yiwei_cv.md
     - Artifacts: 
-      - nav/papers/adaptive_bulk_motion.md
+      - bulk motion: nav/papers/adaptive_bulk_motion.md
+      - head motion: nav/papers/retrospective_correction.md
 
     - Sequences:
       - nav/
