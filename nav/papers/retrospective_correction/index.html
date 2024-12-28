@@ -78,6 +78,11 @@
         <a href="./" class="dropdown-item text-decoration-none  active ">head motion</a>
     </li>
 <!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../SISMIK_for_brain_MRI/" class="dropdown-item text-decoration-none ">SISMIK DL motion</a>
+    </li>
+<!-- endblock -->
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -87,6 +92,17 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../../" class="dropdown-item text-decoration-none ">None</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Thought wandering]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../random_thoughts/" class="dropdown-item text-decoration-none ">random wandering</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -181,25 +197,23 @@
 <li>T1-weighted MPRAGE sequence</li>
 </ul>
 </li>
-<li>
-<p>What recon?</p>
-<ul>
-<li>each k-space line from each coil -&gt; corrected for phase ramps -&gt; regridded in 3D k-space (NUFFT) with the estimated rigid body motion param as suggested by Gallichan [23]</li>
+<li>What recon?<ul>
+<li>Each k-space line from each coil -&gt; corrected for phase ramps -&gt; regridded in 3D k-space (NUFFT) with the estimated rigid body motion param as suggested by Gallichan [23]</li>
 <li>Motion-corrected images were reconed for each coil -&gt; the adaptive combine method was used to create the final image.</li>
-<li>What Electromagnetic tracking data look like?</li>
 </ul>
-<p>translation and rotation of each scan..</p>
 </li>
-<li>
-<p>How do we get the reference image?</p>
-<ul>
+<li>What Electromagnetic tracking data look like?<ul>
+<li>Translation and rotation of each scan..</li>
+</ul>
+</li>
+<li>How do we get the reference image?<ul>
 <li>Still images (include involuntary movements)</li>
+</ul>
+</li>
 <li>
 <p>What is the protocol?</p>
-</li>
-<li>
-<p>Phantom experiments: a pineapple -&gt; 8 times(after movements) * 45s</p>
-</li>
+<ul>
+<li>Phantom experiments: a pineapple -&gt; 8 times(after movements) * 45s</li>
 <li>
 <p>Volunteer experiments: 6 volunteers, each volunteer -&gt; 4 volumes</p>
 <ul>
@@ -246,7 +260,7 @@
             </div>
             <div class="col themed-grid-col"></div>
             <div class="col themed-grid-col">
-                <a rel="next" class="nav-link disabled">
+                <a rel="next" href="../SISMIK_for_brain_MRI/" class="nav-link">
                     Next <i class="fa fa-arrow-right"></i>
                 </a>
             </div>

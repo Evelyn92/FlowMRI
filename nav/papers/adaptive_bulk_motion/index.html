@@ -78,6 +78,11 @@
         <a href="../retrospective_correction/" class="dropdown-item text-decoration-none ">head motion</a>
     </li>
 <!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../SISMIK_for_brain_MRI/" class="dropdown-item text-decoration-none ">SISMIK DL motion</a>
+    </li>
+<!-- endblock -->
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -87,6 +92,17 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../../" class="dropdown-item text-decoration-none ">None</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Thought wandering]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../random_thoughts/" class="dropdown-item text-decoration-none ">random wandering</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -307,7 +323,7 @@
 <ul>
 <li>The FID is typically acquired as the initial part of each readout, before gradients start encoding spatial information.</li>
 </ul>
-<h3 id="3-extract-k-space-center">3. Extract k-Space Center</h3>
+<p><strong>3. Extract k-Space Center</strong></p>
 <ul>
 <li>
 <p>The FID signal corresponds to the low spatial frequency (k-space center) information. You can identify this by:</p>
@@ -316,13 +332,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="4-fid-in-the-context-of-a-stack-of-star-sequence">4. FID in the Context of a Stack-of-Star Sequence</h3>
+<p><strong>4. FID in the Context of a Stack-of-Star Sequence</strong></p>
 <ul>
 <li>In radial sequences like stack-of-stars, k-space is sampled using radial trajectories starting at the center.</li>
 <li>At the start of each radial spoke, the k-space center is sampled, and this corresponds to the <strong>initial FID signal</strong>.</li>
 <li>Because the gradients are weak or inactive near the k-space center, the early signal is dominated by the FID, with minimal spatial encoding effects.</li>
 </ul>
-<h3 id="5-how-motion-affects-the-fid">5. How Motion Affects the FID</h3>
+<p><strong>5. How Motion Affects the FID</strong></p>
 <p>Motion impacts the FID signal in the following ways:</p>
 <p><strong>a. Phase Changes Due to Motion</strong></p>
 <ul>
@@ -340,13 +356,13 @@
 <li>If the motion involves velocity (e.g., blood flow or respiratory motion), it can introduce frequency shifts due to the Doppler effect. These shifts can also be detected in the FID.</li>
 </ul>
 <h2 id="information-about-stack-of-star-sequence">Information about stack-of-star sequence</h2>
-<p><a href="https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199">https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199</a></p>
+<p><a href="https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199">Stack-of-stars</a></p>
 <p>Illustration</p>
 <p><img alt="image" src="../assets/image5.png" /></p>
 <p>But it does not start from the k-space center?</p>
 <p>Here is the described sequence:</p>
 <ul>
-<li>Data are acquired using a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling <a href="https://mriquestions.com/spoiling---what-and-how.html#/">https://mriquestions.com/spoiling---what-and-how.html#/</a></li>
+<li>Data are acquired using a T1‐weighted radial 3D gradient‐echo sequence with both RF and <a href="https://mriquestions.com/spoiling---what-and-how.html#/">gradient spoiling</a>.</li>
 <li>The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.</li>
 <li>After spectral fat suppression using a chemical shift selective (CHESS) pulse, all partitions for one radial angle are acquired with centric reordering before the readout scheme is repeated for subsequent radial projections.</li>
 <li>Golden‐angle ordering with an angular increment of 111.246°25 is used for continuous data acquisition.</li>
