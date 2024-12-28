@@ -5,15 +5,11 @@ Retrospective correction of head motion using measurements from an electromagnet
 - What sequence?
     - T1-weighted MPRAGE sequence
 - What recon?
-    
-    - each k-space line from each coil -> corrected for phase ramps -> regridded in 3D k-space (NUFFT) with the estimated rigid body motion param as suggested by Gallichan [23]
+    - Each k-space line from each coil -> corrected for phase ramps -> regridded in 3D k-space (NUFFT) with the estimated rigid body motion param as suggested by Gallichan [23]
     - Motion-corrected images were reconed for each coil -> the adaptive combine method was used to create the final image.
 - What Electromagnetic tracking data look like?
-    
-    translation and rotation of each scan..
-    
+    - Translation and rotation of each scan..
 - How do we get the reference image?
-    
     - Still images (include involuntary movements)
 - What is the protocol?
     

@@ -10,10 +10,12 @@ nav:
     - Artifacts: 
       - bulk motion: nav/papers/adaptive_bulk_motion.md
       - head motion: nav/papers/retrospective_correction.md
+      - SISMIK DL motion: SISMIK_for_brain_MRI.md
 
     - Sequences:
       - nav/
-    
+    - Thought wandering:
+     - nav/random_thoughts.md
 
 theme:
   name: simple-blog

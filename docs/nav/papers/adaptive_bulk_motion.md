@@ -96,19 +96,19 @@
 
 - The FID is typically acquired as the initial part of each readout, before gradients start encoding spatial information.
 
-### 3\. Extract k-Space Center
+**3\. Extract k-Space Center**
 
 - The FID signal corresponds to the low spatial frequency (k-space center) information. You can identify this by:
     
     - **Temporal Location:** Extract data samples immediately after the RF pulse and before the imaging gradients are active.
 
-### 4\. FID in the Context of a Stack-of-Star Sequence
+**4\. FID in the Context of a Stack-of-Star Sequence**
 
 - In radial sequences like stack-of-stars, k-space is sampled using radial trajectories starting at the center.
 - At the start of each radial spoke, the k-space center is sampled, and this corresponds to the **initial FID signal**.
 - Because the gradients are weak or inactive near the k-space center, the early signal is dominated by the FID, with minimal spatial encoding effects.
 
-### 5\. How Motion Affects the FID
+**5\. How Motion Affects the FID**
 
 Motion impacts the FID signal in the following ways:
 
@@ -129,7 +129,7 @@ Motion impacts the FID signal in the following ways:
 
 ## Information about stack-of-star sequence
 
-[https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199](https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199)
+[Stack-of-stars](https://www.researchgate.net/figure/Illustration-of-3D-k-space-stack-of-stars-trajectory-for-RAVE-Along-the-slice_fig1_330526199)
 
 Illustration
 
@@ -139,7 +139,7 @@ But it does not start from the k-space center?
 
 Here is the described sequence:
 
-- Data are acquired using a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling [https://mriquestions.com/spoiling---what-and-how.html#/](https://mriquestions.com/spoiling---what-and-how.html#/)
+- Data are acquired using a T1‐weighted radial 3D gradient‐echo sequence with both RF and [gradient spoiling](https://mriquestions.com/spoiling---what-and-how.html#/).
 - The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.
 - After spectral fat suppression using a chemical shift selective (CHESS) pulse, all partitions for one radial angle are acquired with centric reordering before the readout scheme is repeated for subsequent radial projections.
 - Golden‐angle ordering with an angular increment of 111.246°25 is used for continuous data acquisition.
