@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
     <head>
-                <title>Logo - FlowMRI</title>
+                <title>head motion - FlowMRI</title>
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
             
-            <link rel="canonical" href="https://evelyn92.github.io/FlowMRI/nav/setup/logo/">
+            <link rel="canonical" href="https://evelyn92.github.io/FlowMRI/nav/papers/retrospective_correction/">
             
 
             
@@ -65,17 +65,17 @@
                             nav-link text-gray text-decoration-none" href="../../yiwei_cv/">[About me]</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="
+                            <a class=" active 
                             nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Artifacts]</a>
                             <ul class="dropdown-menu">
                                     <!-- block dropdown-menu -->
     <li>
-        <a href="../../papers/adaptive_bulk_motion/" class="dropdown-item text-decoration-none ">bulk motion</a>
+        <a href="../adaptive_bulk_motion/" class="dropdown-item text-decoration-none ">bulk motion</a>
     </li>
 <!-- endblock -->
                                     <!-- block dropdown-menu -->
     <li>
-        <a href="../../papers/retrospective_correction/" class="dropdown-item text-decoration-none ">head motion</a>
+        <a href="./" class="dropdown-item text-decoration-none  active ">head motion</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -171,15 +171,66 @@
     <article>
         <header>
             
-                <h1 class="normal title" id="component-title">Logo</h1>
+                <h1 class="normal title" id="component-title">head motion</h1>
             
         </header>
-        <p><p>January 17, 2023</p>
-<hr />
-<h2 id="changing-the-logo">Changing the logo</h2>
-<pre><code>theme:
-  logo: assets/logo.png
-</code></pre></p>
+        <p><p>Retrospective correction of head motion using measurements from an electromagnetic tracker</p>
+<p><a href="https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC6824937&amp;blobtype=pdf">Paper link</a></p>
+<ul>
+<li>What sequence?<ul>
+<li>T1-weighted MPRAGE sequence</li>
+</ul>
+</li>
+<li>
+<p>What recon?</p>
+<ul>
+<li>each k-space line from each coil -&gt; corrected for phase ramps -&gt; regridded in 3D k-space (NUFFT) with the estimated rigid body motion param as suggested by Gallichan [23]</li>
+<li>Motion-corrected images were reconed for each coil -&gt; the adaptive combine method was used to create the final image.</li>
+<li>What Electromagnetic tracking data look like?</li>
+</ul>
+<p>translation and rotation of each scan..</p>
+</li>
+<li>
+<p>How do we get the reference image?</p>
+<ul>
+<li>Still images (include involuntary movements)</li>
+<li>
+<p>What is the protocol?</p>
+</li>
+<li>
+<p>Phantom experiments: a pineapple -&gt; 8 times(after movements) * 45s</p>
+</li>
+<li>
+<p>Volunteer experiments: 6 volunteers, each volunteer -&gt; 4 volumes</p>
+<ul>
+<li>still -&gt; used as no motion reference image</li>
+<li>four movements (random position)</li>
+<li>nodding up down</li>
+<li>continuous head nodding: up-down, down-up every 30 seconds (not explained too much)<ul>
+<li>Patient scans: eight pediatric patients (Not explain too much)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Metrics:</p>
+<ul>
+<li>
+<p>normalized root-mean-square error (NRMSE) and the structural similarity (SSIM) index</p>
+<p>(using FSL tool BET [26]) relative to this motion-free reference image.</p>
+</li>
+<li>
+<p>a reference-free metric, average edge strength (AES) was calculated for each scan</p>
+<p>As suggested by Aksoy et al. [27], AES values were normalized by the corresponding slice in the “no motion” dataset.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Limitation: only in-plane motion, but inability of correction for though-plane motion in 2D sequence.</p>
+</li>
+</ul></p>
     </article>
 </section>
 <!-- endblock -->
@@ -187,6 +238,19 @@
 
             
                     <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../adaptive_bulk_motion/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" class="nav-link disabled">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
 <!-- endblock -->
             
 
