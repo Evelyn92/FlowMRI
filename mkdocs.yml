@@ -1,22 +1,18 @@
 site_name: FlowMRI
 repo_name: Evelyn92/FlowMRI
 repo_url: https://github.com/Evelyn92/FlowMRI
+site_url: https://evelyn92.github.io/FlowMRI
 
 
 nav:
     - Home: index.md
     - About me: nav/yiwei_cv.md
     - Artifacts: 
-      - nav/getting-started.md
-    - MRI Basics:
-      - nav/setup/components.md
-      - nav/setup/colors.md
-      - nav/setup/fonts.md
-      - nav/setup/logo.md
-      - nav/setup/favicon.md
+      - nav/papers/adaptive_bulk_motion.md
+
     - Sequences:
-      - nav/development/development-guide.md
-      - nav/development/release-notes.md
+      - nav/
+    
 
 theme:
   name: simple-blog
@@ -24,7 +20,7 @@ theme:
   logo: assets/logo.png
   theme_style: light
   site_name_style: normal
-  title_style: bold
+  title_style: normal
   colors:
     text: black
     title: black
