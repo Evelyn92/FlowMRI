@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+    <head>
+                <title>Use atlases - FlowMRI</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            <link rel="canonical" href="https://evelyn92.github.io/FlowMRI/nav/development/eye_atlases/">
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../../../assets/css/main.min.css">
+                <link href="../../../stylesheets/extra.css" rel="stylesheet">
+                <script src="../../../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+            <img class="logo" src="../../../assets/logo.png">
+        
+
+        
+            <span class="normal fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">FlowMRI</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../..">[Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../yiwei_cv/">[About me]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Artifacts]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/adaptive_bulk_motion/" class="dropdown-item text-decoration-none ">bulk motion</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/retrospective_correction/" class="dropdown-item text-decoration-none ">head motion</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/SISMIK_for_brain_MRI/" class="dropdown-item text-decoration-none ">SISMIK DL motion</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" active 
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Development]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="./" class="dropdown-item text-decoration-none  active ">Use atlases</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Thought Wandering]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../random_thoughts/" class="dropdown-item text-decoration-none ">SI projection and FID</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                        
+                            <!-- block source -->
+<div class="md-source source-detail">
+  <div class="md-source-repo-icon">
+    <i class="fa fa-github-alt" aria-hidden="true"></i>
+  </div>
+
+  <div class="md-source-repo-url">
+    <a href="https://github.com/Evelyn92/FlowMRI" class="md-source">
+      Evelyn92/FlowMRI
+    </a>
+
+    <ul class="md-source-repo-text">
+      <li>
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <img alt="GitHub tag (latest by date)"
+          src="https://img.shields.io/github/v/tag/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <img alt="GitHub Repo stars"
+          src="https://img.shields.io/github/stars/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <img alt="GitHub forks"
+          src="https://img.shields.io/github/forks/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!--  endblock -->
+                        
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+                <h1 class="normal title" id="component-title">Use atlases</h1>
+            
+        </header>
+        <p><p>🐾  Usage of eye atlases</p>
+<hr />
+<h2 id="my-question">💫My question</h2>
+<p>I want to use that for segment specific area for calculating SNR, CNR... Now I have template.nii.gz: atlas of the eye images (per sex), and max_prob_map.npy and max_prob_map.nii.gz: maximum probability maps (per sex), I also have my 3d image in pkl format. How can I do the registration and mask out the region I need?</p>
+<h2 id="answer-from-chatgpt">💥Answer from ChatGPT</h2>
+<p>To use the <strong>eye atlas</strong> and <strong>probability maps</strong> for segmenting specific regions and calculating metrics like <strong>SNR</strong> and <strong>CNR</strong>, you'll need to go through several steps, which include image registration, applying masks, and performing the desired calculations. Here’s a general outline of the process:</p>
+<h3 id="1-prepare-the-data">1. <strong>Prepare the Data</strong></h3>
+<ul>
+<li>
+<p>You have the following:</p>
+<ul>
+<li><strong>template.nii.gz</strong>: A template atlas (likely a brain or eye atlas).</li>
+<li><strong>max_prob_map.npy or max_prob_map.nii.gz</strong>: Maximum probability maps for each sex.</li>
+<li><strong>3D image in PKL format</strong>: This is your raw 3D image data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Objective</strong>: Register the <strong>3D image</strong> to the <strong>template atlas</strong>, use the <strong>probability maps</strong> to mask the regions of interest, and calculate metrics like <strong>SNR</strong> (Signal-to-Noise Ratio) and <strong>CNR</strong> (Contrast-to-Noise Ratio) on those regions.</p>
+</li>
+</ul>
+<hr />
+<h3 id="2-convert-pkl-to-nifti-if-needed">2. <strong>Convert PKL to NIfTI (if needed)</strong></h3>
+<p>If your 3D image is stored in a <strong>PKL file</strong> (Pickle format), you'll first need to load the PKL file and convert it to a <strong>NIfTI file</strong> (.nii.gz), which is a more common format for medical imaging tasks.</p>
+<p>Here's how you can do that in Python:</p>
+<pre class="codehilite"><code class="language-python">import pickle
+import nibabel as nib
+import numpy as np
+
+# Load your PKL file
+with open('your_image.pkl', 'rb') as f:
+    image_data = pickle.load(f)
+
+# Convert the image data to a NIfTI format
+image_nifti = nib.Nifti1Image(image_data, affine=np.eye(4))
+
+# Save the NIfTI file
+nib.save(image_nifti, 'your_image.nii.gz')
+</code></pre>
+
+<p>This will give you a <strong>NIfTI file</strong> of your image.</p>
+<hr />
+<h3 id="3-register-the-3d-image-to-the-template-atlas">3. <strong>Register the 3D Image to the Template Atlas</strong></h3>
+<p>To align your 3D image with the <strong>template.nii.gz</strong> (the atlas), you can use <strong>image registration</strong>. A popular tool for this is <strong>FSL</strong> (<code>flirt</code> or <code>fnirt</code>) or <strong>ANTs</strong> (Advanced Normalization Tools). </p>
+<p>Here’s how you can use FSL to register the images:</p>
+<h4 id="fsl-registration-example">FSL Registration Example:</h4>
+<pre class="codehilite"><code class="language-bash"># Using FSL's flirt for linear registration
+flirt -in your_image.nii.gz -ref template.nii.gz -out registered_image.nii.gz -omat transform.mat
+</code></pre>
+
+<p>This command will perform a <strong>linear registration</strong> of your <strong>image</strong> to the <strong>template</strong> and save the output as <strong>registered_image.nii.gz</strong> along with the transformation matrix <strong>transform.mat</strong>.</p>
+<p>If you need non-linear registration (e.g., to handle more complex deformations), you can use <strong>fnirt</strong>:</p>
+<pre class="codehilite"><code class="language-bash"># Using FSL's fnirt for non-linear registration
+fnirt --in=your_image.nii.gz --ref=template.nii.gz --out=registered_image_nl.nii.gz --aff=transform.mat
+</code></pre>
+
+<p>After registration, your <strong>3D image</strong> will be aligned to the <strong>template atlas</strong>.</p>
+<hr />
+<h3 id="4-masking-the-desired-region-using-probability-maps">4. <strong>Masking the Desired Region Using Probability Maps</strong></h3>
+<p>You can use the <strong>maximum probability map</strong> (<code>max_prob_map.nii.gz</code>) to identify and mask specific regions of interest in the registered image. The probability map indicates the likelihood of a certain structure or region in the atlas.</p>
+<p>To extract and mask specific regions based on the probability map:</p>
+<h4 id="using-nibabel-and-numpy">Using <code>nibabel</code> and <code>numpy</code>:</h4>
+<pre class="codehilite"><code class="language-python">import nibabel as nib
+import numpy as np
+
+# Load the registered 3D image and the probability map
+registered_image = nib.load('registered_image.nii.gz')
+prob_map = nib.load('max_prob_map.nii.gz')
+
+# Get the image data (as numpy arrays)
+image_data = registered_image.get_fdata()
+prob_map_data = prob_map.get_fdata()
+
+# Define a threshold (e.g., 50% probability) for masking
+threshold = 0.5
+mask = prob_map_data &gt; threshold
+
+# Apply the mask to the registered image
+masked_image = image_data * mask
+
+# Save the masked image
+masked_image_nifti = nib.Nifti1Image(masked_image, registered_image.affine)
+nib.save(masked_image_nifti, 'masked_image.nii.gz')
+</code></pre>
+
+<p>This will create a <strong>masked image</strong> (<code>masked_image.nii.gz</code>) where the regions of interest, as identified by the probability map, are kept and everything else is set to zero.</p>
+<hr />
+<h3 id="5-compute-snr-and-cnr">5. <strong>Compute SNR and CNR</strong></h3>
+<p>After masking the desired regions, you can now compute <strong>SNR</strong> and <strong>CNR</strong> using the masked regions. The formulas for these metrics are:</p>
+<ul>
+<li><strong>SNR</strong>: ( \text{SNR} = \frac{\mu_{\text{signal}}}{\sigma_{\text{noise}}} )</li>
+<li>( \mu_{\text{signal}} ) is the mean signal intensity in the region of interest.</li>
+<li>
+<p>( \sigma_{\text{noise}} ) is the standard deviation of the signal in the background or noise region.</p>
+</li>
+<li>
+<p><strong>CNR</strong>: ( \text{CNR} = \frac{\mu_{\text{signal}} - \mu_{\text{background}}}{\sigma_{\text{background}}} )</p>
+</li>
+<li>( \mu_{\text{signal}} ) is the mean intensity of the region of interest.</li>
+<li>( \mu_{\text{background}} ) is the mean intensity of the background.</li>
+<li>( \sigma_{\text{background}} ) is the standard deviation of the background.</li>
+</ul>
+<h4 id="example-calculation-in-python">Example Calculation in Python:</h4>
+<pre class="codehilite"><code class="language-python"># Define the background region (e.g., outside the mask)
+background_mask = ~mask
+
+# Calculate SNR for the masked region
+signal_region = image_data[mask]
+noise_region = image_data[background_mask]
+
+mean_signal = np.mean(signal_region)
+std_noise = np.std(noise_region)
+
+SNR = mean_signal / std_noise
+print(f&quot;SNR: {SNR}&quot;)
+
+# Calculate CNR (assuming background region is well-defined)
+mean_background = np.mean(noise_region)
+std_background = np.std(noise_region)
+
+CNR = (mean_signal - mean_background) / std_background
+print(f&quot;CNR: {CNR}&quot;)
+</code></pre>
+
+<hr />
+<h3 id="6-summary-of-steps">6. <strong>Summary of Steps</strong>:</h3>
+<ol>
+<li>Convert your <strong>PKL file</strong> to <strong>NIfTI format</strong>.</li>
+<li>Perform <strong>image registration</strong> to align your <strong>3D image</strong> with the <strong>template atlas</strong>.</li>
+<li>Use the <strong>probability maps</strong> to create a <strong>mask</strong> of the region of interest.</li>
+<li>Apply the mask to the <strong>registered image</strong> to isolate the region of interest.</li>
+<li>Calculate <strong>SNR</strong> and <strong>CNR</strong> using the masked regions and background regions.</li>
+</ol>
+<h3 id="additional-notes">Additional Notes:</h3>
+<ul>
+<li><strong>Thresholding the Probability Map</strong>: You can adjust the threshold value based on the specificity of the regions you want to mask.</li>
+<li><strong>Post-processing</strong>: You may want to smooth the images or apply other filters depending on your analysis.</li>
+</ul></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../../papers/SISMIK_for_brain_MRI/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" href="../../random_thoughts/" class="nav-link">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '../../..';</script>
+            <script src="../../../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../../../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../../../assets/js/main.min.js""></script>
+                <script src="../../../search/main.js" defer></script>
+
+    </body>
+
+</html>
