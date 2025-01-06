@@ -1,6 +1,6 @@
 ## Paper link
 
-[https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf](https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf)
+[paper link](https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf)
 
 ## Extraction from the paper
 
@@ -17,26 +17,23 @@
         
         - Because the duration and number of intervals with bulk motion is not known in advance, k‐space must be acquired with significant oversampling to provide sufficient k‐space coverage. This prolongs the scan time unnecessarily if no (or only short) intervals of bulk motion occur, or results in residual undersampling artifacts if more bulk motion than expected occurs.
 - Limitations:
-    
     - reject data by bulk motion but does not compensate for respiratory motion -> need second processing step.
         
-- Method
-    
+- Method 
     - Data‐consistency‐driven image stabilization technique that detects and excludes bulk movements during data acquisition.
     - Data corrupted by bulk motion were successfully detected and excluded from image reconstruction
     - An overall increase in image sharpness and reduction of streaking and shine‐through artifacts were seen in the volunteer study, as well as in the neck and knee scans.
     - The proposed technique enables automatic real‐time detection and exclusion of bulk motion during MR examinations without user interaction.
     - the technique automatically detects motion‐free data windows and stops the scan if a window with sufficient length has been identified.
 - What sequence
-    
     - a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling.
     - The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.
     - To obtain motion information, 32 samples of the FID signal are acquired after rewinding the slice selection gradient, which increases the TE by less than 0.5 ms.
+        - Yiwei: so that means each FID signal is acquired after one $$k_{x}-k_{y}$$ plane excited.
     - The FID approach is used in this work to derive a motion signal. It has been shown previously that variations in the signal intensity ratio between different receive coils allow the identification of bulk motion.
     - There are two alternative self-navigation techs:
-        
-        - non-phase-encoded k-space center lines->for stack-of-stars sequence, non-Cartesian 3D trajectories good -> for Cartesian 3D sampling it requires the acquisition of additional non-phase-encoded k-space lines, which prolongs the scan time.
-        - Free induction decay navigators: sample the center of k-space without spatial encoding  immediately after the RF excitation -> selected
+      - non-phase-encoded k-space center lines->for stack-of-stars sequence, non-Cartesian 3D trajectories good -> for Cartesian 3D sampling it requires the acquisition of additional non-phase-encoded k-space lines, which prolongs the scan time.
+      - Free induction decay navigators: sample the center of k-space without spatial encoding  immediately after the RF excitation -> selected
 
 ![image](assets/image1.png)
 
@@ -66,7 +63,7 @@
 
 ### FID signals
 
-[https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.](https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.)
+[ref link](https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.)
 
 ![image](assets/image4.png)
 

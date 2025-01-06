@@ -1,4 +1,4 @@
-   🐾  Random Question Wandering
+   🐾  SI projection and FID
   ---
 ## 🌸 What is the difference between SI-Projection and FID?
 

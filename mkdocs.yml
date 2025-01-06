@@ -11,10 +11,14 @@ nav:
       - bulk motion: nav/papers/adaptive_bulk_motion.md
       - head motion: nav/papers/retrospective_correction.md
       - SISMIK DL motion: nav/papers/SISMIK_for_brain_MRI.md
-    - Sequences:
-      - nav/
+    - Development:
+      - Use atlases: nav/development/eye_atlases.md
+    
     - Thought Wandering:
-      - random Wandering: nav/random_thoughts.md
+      - SI projection and FID: nav/random_thoughts.md
+    
+    - Secret Garden:
+      - SOP for energy: nav/secret_garden/SOP_energy.md
 
 theme:
   name: simple-blog
@@ -44,3 +48,14 @@ markdown_extensions:
   - tables
   - codehilite
   - pymdownx.highlight
+  - pymdownx.arithmatex
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+extra:
+  mathjax_config:
+    tex: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]]
+    }
