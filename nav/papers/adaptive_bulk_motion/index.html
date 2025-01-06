@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
             <link rel="stylesheet" href="../../../assets/css/main.min.css">
                 <link href="../../../stylesheets/extra.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
                 <script src="../../../search/main.js"></script>
 
             
@@ -103,6 +104,17 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../../random_thoughts/" class="dropdown-item text-decoration-none ">SI projection and FID</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Secret Garden]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../secret_garden/SOP_energy/" class="dropdown-item text-decoration-none ">SOP for energy</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -191,7 +203,7 @@
             
         </header>
         <p><h2 id="paper-link">Paper link</h2>
-<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf">https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf</a></p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5643254/pdf/NBM-30-na.pdf">paper link</a></p>
 <h2 id="extraction-from-the-paper">Extraction from the paper</h2>
 <ul>
 <li>
@@ -215,38 +227,35 @@
 <li>
 <p>Because the duration and number of intervals with bulk motion is not known in advance, k‐space must be acquired with significant oversampling to provide sufficient k‐space coverage. This prolongs the scan time unnecessarily if no (or only short) intervals of bulk motion occur, or results in residual undersampling artifacts if more bulk motion than expected occurs.</p>
 </li>
-<li>Limitations:</li>
+<li>Limitations:<ul>
+<li>reject data by bulk motion but does not compensate for respiratory motion -&gt; need second processing step.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>reject data by bulk motion but does not compensate for respiratory motion -&gt; need second processing step.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Method</p>
+<p>Method </p>
 <ul>
 <li>Data‐consistency‐driven image stabilization technique that detects and excludes bulk movements during data acquisition.</li>
 <li>Data corrupted by bulk motion were successfully detected and excluded from image reconstruction</li>
 <li>An overall increase in image sharpness and reduction of streaking and shine‐through artifacts were seen in the volunteer study, as well as in the neck and knee scans.</li>
 <li>The proposed technique enables automatic real‐time detection and exclusion of bulk motion during MR examinations without user interaction.</li>
 <li>the technique automatically detects motion‐free data windows and stops the scan if a window with sufficient length has been identified.</li>
-<li>
-<p>What sequence</p>
-</li>
-<li>
-<p>a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling.</p>
-</li>
-<li>The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.</li>
-<li>To obtain motion information, 32 samples of the FID signal are acquired after rewinding the slice selection gradient, which increases the TE by less than 0.5 ms.</li>
-<li>The FID approach is used in this work to derive a motion signal. It has been shown previously that variations in the signal intensity ratio between different receive coils allow the identification of bulk motion.</li>
-<li>
-<p>There are two alternative self-navigation techs:</p>
-<ul>
-<li>non-phase-encoded k-space center lines-&gt;for stack-of-stars sequence, non-Cartesian 3D trajectories good -&gt; for Cartesian 3D sampling it requires the acquisition of additional non-phase-encoded k-space lines, which prolongs the scan time.</li>
-<li>Free induction decay navigators: sample the center of k-space without spatial encoding  immediately after the RF excitation -&gt; selected</li>
 </ul>
 </li>
+<li>What sequence<ul>
+<li>a T1‐weighted radial 3D gradient‐echo sequence with both RF and gradient spoiling.</li>
+<li>The stack‐of‐stars scheme with Cartesian encoding along the kz dimension and radial sampling in the kx–ky plane is used for volumetric k‐space coverage.</li>
+<li>To obtain motion information, 32 samples of the FID signal are acquired after rewinding the slice selection gradient, which increases the TE by less than 0.5 ms.<ul>
+<li>Yiwei: so that means each FID signal is acquired after one <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">k_{x}-k_{y}</span><script type="math/tex">k_{x}-k_{y}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">k_{x}-k_{y}</span><script type="math/tex">k_{x}-k_{y}</script></span></script></span> plane excited.</li>
+</ul>
+</li>
+<li>The FID approach is used in this work to derive a motion signal. It has been shown previously that variations in the signal intensity ratio between different receive coils allow the identification of bulk motion.</li>
+<li>There are two alternative self-navigation techs:</li>
+<li>non-phase-encoded k-space center lines-&gt;for stack-of-stars sequence, non-Cartesian 3D trajectories good -&gt; for Cartesian 3D sampling it requires the acquisition of additional non-phase-encoded k-space lines, which prolongs the scan time.</li>
+<li>Free induction decay navigators: sample the center of k-space without spatial encoding  immediately after the RF excitation -&gt; selected</li>
 </ul>
 </li>
 </ul>
@@ -287,7 +296,7 @@
 </ul>
 <h2 id="information-about-fid-signal">Information about FID signal</h2>
 <h3 id="fid-signals">FID signals</h3>
-<p><a href="https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.">https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.</a></p>
+<p><a href="https://www.sciencedirect.com/topics/neuroscience/free-induction-decay#:~:text=Free%20Induction%20Decay%20(FID)%20refers,its%20original%20alignment%20with%20B0.">ref link</a></p>
 <p><img alt="image" src="../assets/image4.png" /></p>
 <ul>
 <li>When an <a href="https://www.sciencedirect.com/topics/neuroscience/radiofrequency-pulse" title="Learn more about RF pulse from ScienceDirect's AI-generated Topic Pages">RF pulse</a> is turned off, protons begin to lose phase coherence, resulting in an exponential decrease of the signal intensity to zero. This signal decay is called free induction decay (FID) (Currie et al., 2013).</li>
@@ -416,6 +425,7 @@
             <script src="../../../assets/js/jquery-3.3.1.slim.min.js""></script>
             <script src="../../../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../../../assets/js/main.min.js""></script>
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
                 <script src="../../../search/main.js" defer></script>
 
     </body>

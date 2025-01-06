@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
             <link rel="stylesheet" href="../../../assets/css/main.min.css">
                 <link href="../../../stylesheets/extra.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
                 <script src="../../../search/main.js"></script>
 
             
@@ -103,6 +104,17 @@
                                     <!-- block dropdown-menu -->
     <li>
         <a href="../../random_thoughts/" class="dropdown-item text-decoration-none ">SI projection and FID</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Secret Garden]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../secret_garden/SOP_energy/" class="dropdown-item text-decoration-none ">SOP for energy</a>
     </li>
 <!-- endblock -->
                             </ul>
@@ -279,17 +291,17 @@ nib.save(masked_image_nifti, 'masked_image.nii.gz')
 <h3 id="5-compute-snr-and-cnr">5. <strong>Compute SNR and CNR</strong></h3>
 <p>After masking the desired regions, you can now compute <strong>SNR</strong> and <strong>CNR</strong> using the masked regions. The formulas for these metrics are:</p>
 <ul>
-<li><strong>SNR</strong>: ( \text{SNR} = \frac{\mu_{\text{signal}}}{\sigma_{\text{noise}}} )</li>
-<li>( \mu_{\text{signal}} ) is the mean signal intensity in the region of interest.</li>
+<li><strong>SNR</strong>: <span class="arithmatex"><span class="MathJax_Preview"> \text{SNR} = \frac{\mu_{\text{signal}}}{\sigma_{\text{noise}}} </span><script type="math/tex"> \text{SNR} = \frac{\mu_{\text{signal}}}{\sigma_{\text{noise}}} </script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> \mu_{\text{signal}} </span><script type="math/tex"> \mu_{\text{signal}} </script></span> is the mean signal intensity in the region of interest.</li>
 <li>
-<p>( \sigma_{\text{noise}} ) is the standard deviation of the signal in the background or noise region.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview"> \sigma_{\text{noise}} </span><script type="math/tex"> \sigma_{\text{noise}} </script></span> is the standard deviation of the signal in the background or noise region.</p>
 </li>
 <li>
-<p><strong>CNR</strong>: ( \text{CNR} = \frac{\mu_{\text{signal}} - \mu_{\text{background}}}{\sigma_{\text{background}}} )</p>
+<p><strong>CNR</strong>: <span class="arithmatex"><span class="MathJax_Preview"> \text{CNR} = \frac{\mu_{\text{signal}} - \mu_{\text{background}}}{\sigma_{\text{background}}} </span><script type="math/tex"> \text{CNR} = \frac{\mu_{\text{signal}} - \mu_{\text{background}}}{\sigma_{\text{background}}} </script></span></p>
 </li>
-<li>( \mu_{\text{signal}} ) is the mean intensity of the region of interest.</li>
-<li>( \mu_{\text{background}} ) is the mean intensity of the background.</li>
-<li>( \sigma_{\text{background}} ) is the standard deviation of the background.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> \mu_{\text{signal}} </span><script type="math/tex"> \mu_{\text{signal}} </script></span> is the mean intensity of the region of interest.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> \mu_{\text{background}} </span><script type="math/tex"> \mu_{\text{background}} </script></span> is the mean intensity of the background.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> \sigma_{\text{background}} </span><script type="math/tex"> \sigma_{\text{background}} </script></span> is the standard deviation of the background.</li>
 </ul>
 <h4 id="example-calculation-in-python">Example Calculation in Python:</h4>
 <pre class="codehilite"><code class="language-python"># Define the background region (e.g., outside the mask)
@@ -376,6 +388,7 @@ print(f&quot;CNR: {CNR}&quot;)
             <script src="../../../assets/js/jquery-3.3.1.slim.min.js""></script>
             <script src="../../../assets/js/bootstrap.bundle.min.js""></script>
             <script src="../../../assets/js/main.min.js""></script>
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
                 <script src="../../../search/main.js" defer></script>
 
     </body>
