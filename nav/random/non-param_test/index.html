@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+    <head>
+                <title>non-param test - FlowMRI</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+            <link rel="canonical" href="https://evelyn92.github.io/FlowMRI/nav/random/non-param_test/">
+            
+
+            
+                <link  rel="icon" type="image/x-icon" href="../../../assets/favicon.ico">
+            
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="../../../assets/css/main.min.css">
+                <link href="../../../stylesheets/extra.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+                <script src="../../../search/main.js"></script>
+
+            
+                
+            
+    </head>
+
+    <body>
+        <div class="container py-3">
+            <header>
+                    <!-- block header -->
+<nav class="navbar navbar-expand-xl border-bottom">
+    <div class="container-fluid">
+        
+            <img class="logo" src="../../../assets/logo.png">
+        
+
+        
+            <span class="normal fs-4 title-color site-name" id="component-site-name" style="text-transform: uppercase;">FlowMRI</span>
+        
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+            aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+            <ul class="navbar-nav">
+
+                <!-- block menu -->
+                <li class="nav-item">
+                    <!-- block menu -->
+    
+        <li class="nav-item" id="component-menu">
+            <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../..">[Home]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="
+                            nav-link text-gray text-decoration-none" href="../../yiwei_cv/">[About me]</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Artifacts]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/adaptive_bulk_motion/" class="dropdown-item text-decoration-none ">bulk motion</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/retrospective_correction/" class="dropdown-item text-decoration-none ">head motion</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../papers/SISMIK_for_brain_MRI/" class="dropdown-item text-decoration-none ">SISMIK DL motion</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Development]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../development/eye_atlases/" class="dropdown-item text-decoration-none ">Use atlases</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" active 
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Thought Wandering]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../SI_FID/" class="dropdown-item text-decoration-none ">SI projection and FID</a>
+    </li>
+<!-- endblock -->
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="./" class="dropdown-item text-decoration-none  active ">non-param test</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="
+                            nav-link dropdown-toggle text-decoration-none" href="#" data-bs-toggle="dropdown">[Secret Garden]</a>
+                            <ul class="dropdown-menu">
+                                    <!-- block dropdown-menu -->
+    <li>
+        <a href="../../secret_garden/SOP_energy/" class="dropdown-item text-decoration-none ">SOP for energy</a>
+    </li>
+<!-- endblock -->
+                            </ul>
+                        </li>
+            </ul>
+        </li>
+<!-- endblock -->
+                </li>
+                <!-- endblock -->
+
+                <!-- block search -->
+                <li class="nav-item">
+                    <a class="collapsed" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <div class="md-search-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <!--  endblock -->
+
+                <!-- block source -->
+                <li class="nav-item">
+                    
+                        
+                            <!-- block source -->
+<div class="md-source source-detail">
+  <div class="md-source-repo-icon">
+    <i class="fa fa-github-alt" aria-hidden="true"></i>
+  </div>
+
+  <div class="md-source-repo-url">
+    <a href="https://github.com/Evelyn92/FlowMRI" class="md-source">
+      Evelyn92/FlowMRI
+    </a>
+
+    <ul class="md-source-repo-text">
+      <li>
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <img alt="GitHub tag (latest by date)"
+          src="https://img.shields.io/github/v/tag/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <img alt="GitHub Repo stars"
+          src="https://img.shields.io/github/stars/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+
+      <li>
+        <i class="fa fa-code-fork" aria-hidden="true"></i>
+        <img alt="GitHub forks"
+          src="https://img.shields.io/github/forks/Evelyn92/FlowMRI?color=white&label=%20&style=flat-square">
+      </li>
+    </ul>
+  </div>
+
+</div>
+<!--  endblock -->
+                        
+                    
+                </li>
+                <!--  endblock -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--  endblock -->
+            </header>
+
+            <main><!-- block search -->
+<div class="collapse" id="collapseExample">
+    <div role="search" class="search-box">
+        <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+            <input type="text" name="q" class="search-query"
+            placeholder="Search docs" title="Type search term here" />
+        </form>
+    </div>
+</div>
+<!-- endblock -->
+                    <!-- block content -->
+<section class="container post">
+    <article>
+        <header>
+            
+                <h1 class="normal title" id="component-title">non-param test</h1>
+            
+        </header>
+        <p><h2 id="q1">🌸 Q1</h2>
+<h2 id="i-want-to-do-t-test-for-comparison-of-two-sets-of-data-the-first-dataset-are-the-reconstructed-images-from-raw-data-including-subject-1-to-4-with-method1-the-second-dataset-are-reconstructed-with-the-same-raw-data-including-subject-1-to-4-but-with-method-2-i-want-to-check-if-the-difference-is-significant-or-not-and-i-cannot-promise-the-distribution-is-normal-gaussian-what-should-i-do">I want to do t-test for comparison of two sets of data. The first dataset are the reconstructed images from raw data including subject 1 to 4, with method1. The second dataset are reconstructed with the same raw data including subject 1 to 4, but with method 2. I want to check if the difference is significant or not, and I cannot promise the distribution is normal Gaussian. What should I do?</h2>
+<p>Since you cannot assume a normal Gaussian distribution for your datasets, it's better to use a <strong>non-parametric test</strong> to check for significant differences between the two methods.</p>
+<h3 id="steps">Steps:</h3>
+<ol>
+<li><strong>Choose a Non-Parametric Test</strong>: </li>
+<li>Use the <strong>Wilcoxon Signed-Rank Test</strong> if the data are paired (e.g., the same subjects reconstructed with two different methods).</li>
+<li>
+<p>If the data are independent (e.g., different subjects for the two methods), use the <strong>Mann-Whitney U Test</strong>.</p>
+</li>
+<li>
+<p><strong>Check Assumptions</strong>:</p>
+</li>
+<li><strong>Wilcoxon Signed-Rank Test</strong>: Assumes the data are paired and the differences are symmetrically distributed.</li>
+<li>
+<p><strong>Mann-Whitney U Test</strong>: Does not assume symmetry but requires independent samples.</p>
+</li>
+<li>
+<p><strong>Perform the Test</strong>:</p>
+</li>
+<li>
+<p>In Python, you can use <code>scipy.stats</code> to perform these tests.</p>
+<ul>
+<li><strong>Wilcoxon Test</strong>:
+   <code>python
+   from scipy.stats import wilcoxon
+   stat, p = wilcoxon(data_method1, data_method2)
+   print(f"Statistic={stat}, p-value={p}")</code></li>
+<li><strong>Mann-Whitney U Test</strong>:
+   <code>python
+   from scipy.stats import mannwhitneyu
+   stat, p = mannwhitneyu(data_method1, data_method2)
+   print(f"Statistic={stat}, p-value={p}")</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Interpret the Results</strong>:</p>
+</li>
+<li>If the <strong>p-value &lt; 0.05</strong>, you can reject the null hypothesis and conclude that the difference between the methods is statistically significant.</li>
+<li>
+<p>If <strong>p-value ≥ 0.05</strong>, there is no significant difference.</p>
+</li>
+<li>
+<p><strong>For Robustness</strong>:</p>
+</li>
+<li>If the datasets are small, consider performing a <strong>permutation test</strong> as a supplementary analysis to confirm the results.</li>
+</ol>
+<p>Let me know if you need help coding this or further clarification!</p>
+<h2 id="q2">🌸 Q2</h2>
+<h2 id="like-i-compare-the-union-set-of-sub1_method1-sub2_method1sub3_method1-and-sub4_method1-with-the-other-union-set-of-sub1_method2-sub2_method2sub3_method2-and-sub4_method2">Like I compare the union set of sub1_method1, sub2_method1,sub3_method1 and sub4_method1 with the other union set of sub1_method2, sub2_method2,sub3_method2 and sub4_method2.</h2>
+<p>If you're comparing the <strong>union</strong> of data from all subjects for Method 1 against the <strong>union</strong> for Method 2, the data are no longer paired (since they represent combined distributions). Here's how you can proceed:</p>
+<h3 id="1-combine-the-data">1. <strong>Combine the Data</strong>:</h3>
+<ul>
+<li>Create two datasets:<ul>
+<li><code>data_method1</code>: Concatenate all data for subjects 1 to 4 under Method 1.</li>
+<li><code>data_method2</code>: Concatenate all data for subjects 1 to 4 under Method 2.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-non-parametric-test">2. <strong>Non-Parametric Test</strong>:</h3>
+<p>Since the union sets are independent, use the <strong>Mann-Whitney U Test</strong>, which does not assume normality or paired data.</p>
+<p>```python
+   from scipy.stats import mannwhitneyu</p>
+<p># Assuming data_method1 and data_method2 are your combined datasets
+   stat, p = mannwhitneyu(data_method1, data_method2)
+   print(f"Statistic={stat}, p-value={p}")</p>
+<p>if p &lt; 0.05:
+       print("Significant difference between Method 1 and Method 2")
+   else:
+       print("No significant difference between Method 1 and Method 2")
+   ```</p>
+<h3 id="3-permutation-test-optional">3. <strong>Permutation Test (Optional)</strong>:</h3>
+<p>To increase robustness (especially for small or complex data), you can also run a <strong>permutation test</strong>. This involves randomly shuffling the labels (<code>method1</code> and <code>method2</code>) many times and comparing the observed test statistic to the distribution of shuffled statistics.</p>
+<p>```python
+   from scipy.stats import permutation_test</p>
+<p>def statistic(x, y):
+       return abs(x.mean() - y.mean())</p>
+<p>result = permutation_test((data_method1, data_method2), statistic, permutation_type='independent', n_resamples=10000)
+   print(f"P-value: {result.pvalue}")</p>
+<p>if result.pvalue &lt; 0.05:
+       print("Significant difference based on permutation test")
+   else:
+       print("No significant difference based on permutation test")
+   ```</p>
+<h3 id="4-key-considerations">4. <strong>Key Considerations</strong>:</h3>
+<ul>
+<li>Be cautious when interpreting the results if the sample sizes for the union sets are very different (e.g., if some subjects contribute significantly more data than others).</li>
+<li>Ensure your <code>union sets</code> are balanced to avoid bias, especially if one method generates substantially more or fewer values.</li>
+</ul>
+<p>This approach allows you to determine whether the reconstructed images' quality metrics differ significantly between the two methods when considering all subjects collectively. Let me know if you need further assistance!</p>
+<h2 id="q3">🌸 Q3</h2>
+<h2 id="they-are-not-paired-really-but-if-i-compare-sub1_method1-with-sub1_method2-it-should-be-paired">They are not paired? really? but if I compare sub1_method1 with sub1_method2, it should be paired?</h2>
+<p>You're absolutely correct—if you're comparing <strong>subject-wise results</strong> (e.g., <code>sub1_method1</code> with <code>sub1_method2</code>, <code>sub2_method1</code> with <code>sub2_method2</code>, etc.), then the data are <strong>paired</strong>. Pairing arises because the same subject's data are reconstructed using two methods, which introduces a natural correspondence.</p>
+<p>However, when you <strong>union</strong> the datasets for all subjects (combining them into a single dataset for Method 1 and Method 2), you lose this pairing, and the data should be treated as <strong>independent</strong> unless you analyze them subject-by-subject.</p>
+<h3 id="how-to-proceed">How to Proceed:</h3>
+<ol>
+<li>
+<p><strong>Subject-Wise Paired Test (Preferred)</strong>:
+   If you want to account for the pairing, you should calculate a single summary metric (e.g., mean, median, standard deviation, etc.) for each subject's data under each method and then compare those metrics <strong>subject-wise</strong>. </p>
+</li>
+<li>
+<p>Example: Compute the mean SNR for <code>sub1_method1</code> and <code>sub1_method2</code>, then for <code>sub2</code>, etc., resulting in paired values for each subject.</p>
+</li>
+<li>
+<p>Use the <strong>Wilcoxon Signed-Rank Test</strong> for these paired metrics:
+     ```python
+     from scipy.stats import wilcoxon</p>
+<p># Example subject-wise metrics
+ metrics_method1 = [sub1_method1_mean, sub2_method1_mean, sub3_method1_mean, sub4_method1_mean]
+ metrics_method2 = [sub1_method2_mean, sub2_method2_mean, sub3_method2_mean, sub4_method2_mean]</p>
+<p>stat, p = wilcoxon(metrics_method1, metrics_method2)
+ print(f"Statistic={stat}, p-value={p}")</p>
+<p>if p &lt; 0.05:
+     print("Significant difference between Method 1 and Method 2")
+ else:
+     print("No significant difference between Method 1 and Method 2")
+ ```</p>
+</li>
+<li>
+<p><strong>Union of All Data (Independent Test)</strong>:
+   If you choose to compare the union of all data for all subjects between Method 1 and Method 2, the test is no longer paired because the subject correspondence is lost. In this case, use the <strong>Mann-Whitney U Test</strong> as described earlier.</p>
+</li>
+</ol>
+<h3 id="key-recommendation">Key Recommendation:</h3>
+<p>Use a <strong>subject-wise paired test</strong> whenever possible because it respects the pairing inherent in the experimental design. This approach is statistically more powerful and avoids conflating inter-subject variability with the effect of the reconstruction method. Only use the union-based approach if there's a compelling reason to analyze the data in aggregate form without considering subject correspondence.</p>
+<p>Let me know if you'd like more clarification or help coding this!</p>
+<h2 id="q4">🌸 Q4</h2>
+<h2 id="if-i-use-paired-test-subject-by-subject-i-get-4-sets-of-wilcocon-test-how-can-i-combine-the-4-sets-then">If I use paired test, subject by subject, I get 4 sets of wilcocon test. How can I combine the 4 sets then?</h2>
+<p>When you perform <strong>subject-wise paired Wilcoxon tests</strong> for each subject individually, you end up with four separate p-values (one for each subject). To combine these results and assess the overall significance across all subjects, you can use <strong>meta-analysis techniques</strong> designed for combining p-values. Here are the common methods:</p>
+<h3 id="1-fishers-combined-probability-test">1. <strong>Fisher's Combined Probability Test</strong>:</h3>
+<p>This method combines p-values into a single test statistic, which follows a chi-square distribution.</p>
+<pre class="codehilite"><code class="language-python">import numpy as np
+from scipy.stats import combine_pvalues
+
+# Example p-values from subject-wise Wilcoxon tests
+p_values = [p1, p2, p3, p4]
+
+# Combine p-values using Fisher's method
+stat, combined_p = combine_pvalues(p_values, method='fisher')
+print(f&quot;Fisher's combined statistic: {stat}, Combined p-value: {combined_p}&quot;)
+
+if combined_p &lt; 0.05:
+print(&quot;Overall significant difference between methods&quot;)
+else:
+print(&quot;No overall significant difference between methods&quot;)
+</code></pre>
+
+<h3 id="2-stouffers-z-score-method">2. <strong>Stouffer’s Z-Score Method</strong>:</h3>
+<p>This method weights p-values based on sample sizes (if sample sizes differ across subjects). </p>
+<pre class="codehilite"><code class="language-python">from scipy.stats import norm
+# Example p-values and sample sizes for each subject
+p_values = [p1, p2, p3, p4]
+sample_sizes = [n1, n2, n3, n4]  # Number of samples per subject
+
+# Calculate Z-scores from p-values
+z_scores = [norm.ppf(1 - p) for p in p_values]
+
+# Weighted Z-score
+weights = np.sqrt(sample_sizes)
+combined_z = np.sum(weights * z_scores) / np.sqrt(np.sum(weights**2))
+
+# Convert back to p-value
+combined_p = 1 - norm.cdf(combined_z)
+print(f&quot;Combined Z-score: {combined_z}, Combined p-value: {combined_p}&quot;)
+
+if combined_p &lt; 0.05:
+print(&quot;Overall significant difference between methods&quot;)
+else:
+print(&quot;No overall significant difference between methods&quot;)
+</code></pre>
+
+<hr />
+<h3 id="3-bonferroni-correction">3. <strong>Bonferroni Correction</strong>:</h3>
+<p>Adjust the threshold for significance to account for multiple comparisons. For 4 tests, divide the alpha level (e.g., 0.05) by 4.</p>
+<pre class="codehilite"><code class="language-python">p_values = [p1, p2, p3, p4]
+corrected_alpha = 0.05 / len(p_values)
+
+significant_tests = [p &lt; corrected_alpha for p in p_values]
+print(f&quot;Significant tests after Bonferroni correction: {significant_tests}&quot;)
+
+if any(significant_tests):
+print(&quot;At least one method difference is significant after correction&quot;)
+else:
+print(&quot;No significant differences after correction&quot;)
+</code></pre>
+
+<hr />
+<h3 id="recommendation">Recommendation:</h3>
+<ul>
+<li>Use <strong>Fisher’s method</strong> if you want a simple and commonly used approach to combine p-values.</li>
+<li>Use <strong>Stouffer’s Z-score method</strong> if you have varying sample sizes across subjects.</li>
+<li>Use <strong>Bonferroni correction</strong> if you want a conservative approach to control for multiple comparisons.</li>
+</ul>
+<p>Let me know if you need further clarification or help implementing these methods!</p></p>
+    </article>
+</section>
+<!-- endblock -->
+            </main>
+
+            
+                    <!-- block preview -->
+        <div class="row row-cols-md-3 text-center pt-md-3" id="component-preview">
+            <div class="col themed-grid-col">
+                <a rel="prev" href="../SI_FID/" class="nav-link">
+                    <i class="fa fa-arrow-left"></i> Previous
+                </a>
+            </div>
+            <div class="col themed-grid-col"></div>
+            <div class="col themed-grid-col">
+                <a rel="next" href="../../secret_garden/SOP_energy/" class="nav-link">
+                    Next <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+<!-- endblock -->
+            
+
+            
+                    <!-- block footer -->
+<footer class="pt-4 my-md-5 pt-md-5 border-top" id="component-footer">
+    <div class="row">
+        <div class="col-12 col-md">
+                <!-- block copyright -->
+
+    <small class="d-block mb-3">
+        Made with
+        <a href="https://github.com/FernandoCelmer/mkdocs-simple-blog" target="_blank" rel="noopener">
+            Simple Blog for MkDocs
+        </a>
+    </small>
+
+<!-- endblock -->
+        </div>
+    </div>
+</footer>
+<!-- endblock -->
+            
+        </div>
+
+            <script>var base_url = '../../..';</script>
+            <script src="../../../assets/js/jquery-3.3.1.slim.min.js""></script>
+            <script src="../../../assets/js/bootstrap.bundle.min.js""></script>
+            <script src="../../../assets/js/main.min.js""></script>
+                <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+                <script src="../../../search/main.js" defer></script>
+
+    </body>
+
+</html>
