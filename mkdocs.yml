@@ -15,7 +15,8 @@ nav:
       - Use atlases: nav/development/eye_atlases.md
     
     - Thought Wandering:
-      - SI projection and FID: nav/random_thoughts.md
+      - SI projection and FID: nav/random/SI_FID.md
+      - non-param test: nav/random/non-param_test.md
     
     - Secret Garden:
       - SOP for energy: nav/secret_garden/SOP_energy.md

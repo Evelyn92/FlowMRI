@@ -129,74 +129,77 @@ If I use paired test, subject by subject, I get 4 sets of wilcocon test. How can
 ---
 When you perform **subject-wise paired Wilcoxon tests** for each subject individually, you end up with four separate p-values (one for each subject). To combine these results and assess the overall significance across all subjects, you can use **meta-analysis techniques** designed for combining p-values. Here are the common methods:
 
----
+
 
 ### 1. **Fisher's Combined Probability Test**:
    This method combines p-values into a single test statistic, which follows a chi-square distribution.
 
-   ```python
-   import numpy as np
-   from scipy.stats import combine_pvalues
+```python
 
-   # Example p-values from subject-wise Wilcoxon tests
-   p_values = [p1, p2, p3, p4]
+import numpy as np
+from scipy.stats import combine_pvalues
 
-   # Combine p-values using Fisher's method
-   stat, combined_p = combine_pvalues(p_values, method='fisher')
-   print(f"Fisher's combined statistic: {stat}, Combined p-value: {combined_p}")
+# Example p-values from subject-wise Wilcoxon tests
+p_values = [p1, p2, p3, p4]
 
-   if combined_p < 0.05:
-       print("Overall significant difference between methods")
-   else:
-       print("No overall significant difference between methods")
-   ```
+# Combine p-values using Fisher's method
+stat, combined_p = combine_pvalues(p_values, method='fisher')
+print(f"Fisher's combined statistic: {stat}, Combined p-value: {combined_p}")
 
----
+if combined_p < 0.05:
+print("Overall significant difference between methods")
+else:
+print("No overall significant difference between methods")
+```
+
+
 
 ### 2. **Stouffer’s Z-Score Method**:
    This method weights p-values based on sample sizes (if sample sizes differ across subjects). 
 
-   ```python
-   from scipy.stats import norm
+```python
+from scipy.stats import norm
+# Example p-values and sample sizes for each subject
+p_values = [p1, p2, p3, p4]
+sample_sizes = [n1, n2, n3, n4]  # Number of samples per subject
 
-   # Example p-values and sample sizes for each subject
-   p_values = [p1, p2, p3, p4]
-   sample_sizes = [n1, n2, n3, n4]  # Number of samples per subject
+# Calculate Z-scores from p-values
+z_scores = [norm.ppf(1 - p) for p in p_values]
 
-   # Calculate Z-scores from p-values
-   z_scores = [norm.ppf(1 - p) for p in p_values]
+# Weighted Z-score
+weights = np.sqrt(sample_sizes)
+combined_z = np.sum(weights * z_scores) / np.sqrt(np.sum(weights**2))
 
-   # Weighted Z-score
-   weights = np.sqrt(sample_sizes)
-   combined_z = np.sum(weights * z_scores) / np.sqrt(np.sum(weights**2))
+# Convert back to p-value
+combined_p = 1 - norm.cdf(combined_z)
+print(f"Combined Z-score: {combined_z}, Combined p-value: {combined_p}")
 
-   # Convert back to p-value
-   combined_p = 1 - norm.cdf(combined_z)
-   print(f"Combined Z-score: {combined_z}, Combined p-value: {combined_p}")
+if combined_p < 0.05:
+print("Overall significant difference between methods")
+else:
+print("No overall significant difference between methods")
 
-   if combined_p < 0.05:
-       print("Overall significant difference between methods")
-   else:
-       print("No overall significant difference between methods")
-   ```
+
+```
 
 ---
 
 ### 3. **Bonferroni Correction**:
    Adjust the threshold for significance to account for multiple comparisons. For 4 tests, divide the alpha level (e.g., 0.05) by 4.
 
-   ```python
-   p_values = [p1, p2, p3, p4]
-   corrected_alpha = 0.05 / len(p_values)
+```python
 
-   significant_tests = [p < corrected_alpha for p in p_values]
-   print(f"Significant tests after Bonferroni correction: {significant_tests}")
+p_values = [p1, p2, p3, p4]
+corrected_alpha = 0.05 / len(p_values)
 
-   if any(significant_tests):
-       print("At least one method difference is significant after correction")
-   else:
-       print("No significant differences after correction")
-   ```
+significant_tests = [p < corrected_alpha for p in p_values]
+print(f"Significant tests after Bonferroni correction: {significant_tests}")
+
+if any(significant_tests):
+print("At least one method difference is significant after correction")
+else:
+print("No significant differences after correction")
+```
 
 ---
 
