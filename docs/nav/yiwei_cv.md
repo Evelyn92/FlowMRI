@@ -9,3 +9,4 @@ My research is centered on developing an innovative anatomical and functional MR
 
 ---
 You are welcome to reach out to me at [LinkedIn](https://www.linkedin.com/in/yiwei-jia-6143aa1bb/)!
+---
